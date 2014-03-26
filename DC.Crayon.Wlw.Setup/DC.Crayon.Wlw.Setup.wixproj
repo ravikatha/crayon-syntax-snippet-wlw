@@ -71,7 +71,10 @@
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <PropertyGroup>
-    <PostBuildEvent />
+    <PostBuildEvent>%40echo off
+"$(SolutionDir)..\..\Resources\Tools\DeleteFolder.exe" "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)"
+md "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)"
+xcopy "$(ProjectDir)%2a.%2a" "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)" /E /Q /H /R /Y</PostBuildEvent>
   </PropertyGroup>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.

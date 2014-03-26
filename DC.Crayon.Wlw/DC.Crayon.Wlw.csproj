@@ -131,8 +131,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>REM XCOPY /D /Y /R "$(TargetPath)" "C:\Program Files (x86)\Windows Live\Writer\Plugins\"
+REM XCOPY /D /Y /R "$(TargetDir)*.pdb" "C:\Program Files (x86)\Windows Live\Writer\Plugins\"
+"$(SolutionDir)..\..\Resources\Tools\DeleteFolder.exe" "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)"
+md "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)"
+xcopy "$(ProjectDir)*.*" "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)" /E /Q /H /R /Y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
