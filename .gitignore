@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DC.Crayon.Wlw/bin
+/DC.Crayon.Wlw/obj
+/DC.Crayon.Wlw/DC.Crayon.Wlw.csproj.user
+/DC.Crayon.Wlw/DC.Crayon.Wlw.csproj.vspscc
+/DC.Crayon.Wlw.Setup/bin
+/DC.Crayon.Wlw.Setup/obj
+/DC.Crayon.Wlw.Setup/DC.Crayon.Wlw.Setup.wixproj.user
+/DC.Crayon.Wlw.Setup/DC.Crayon.Wlw.Setup.wixproj.vspscc
+/CrayonWlwPlugin.v12.suo
+/README.html

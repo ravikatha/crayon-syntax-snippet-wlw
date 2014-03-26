@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DC.Crayon.Wlw
+{
+	[Serializable]
+	internal enum PlainCodeViewDisplayMouseTrigger
+	{
+		None,
+		DoubleClick,
+		SingleClick,
+		MouseHover
+	}
+}

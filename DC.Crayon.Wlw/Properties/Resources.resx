@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Help_UseDefault" xml:space="preserve">
+    <value>Check to use the default setting for this option</value>
+  </data>
+  <data name="Error_InvalidLineNumberRange" xml:space="preserve">
+    <value>The value is not valid. Expected format is "1,3-5,8..."</value>
+  </data>
+  <data name="Label_Override" xml:space="preserve">
+    <value>Override</value>
+  </data>
+  <data name="Help_Override" xml:space="preserve">
+    <value>Check to override this option from the global plugin settings</value>
+  </data>
+  <data name="Error_FieldRequired" xml:space="preserve">
+    <value>This field is required</value>
+  </data>
+  <data name="Label_UseDefault" xml:space="preserve">
+    <value>Use Default</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Group_Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Group_Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="Group_CustomOptions" xml:space="preserve">
+    <value>Custom options</value>
+  </data>
+  <data name="Group_Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Group_Lines" xml:space="preserve">
+    <value>Lines</value>
+  </data>
+  <data name="Group_Metrics" xml:space="preserve">
+    <value>Metrics</value>
+  </data>
+  <data name="Group_Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Group_Toolbar" xml:space="preserve">
+    <value>Toolbar</value>
+  </data>
+  <data name="Label_Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Label_DontHighlight" xml:space="preserve">
+    <value>Don't highlight</value>
+  </data>
+  <data name="Label_Inline" xml:space="preserve">
+    <value>Inline</value>
+  </data>
+  <data name="Label_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Label_LineRange" xml:space="preserve">
+    <value>Line range</value>
+  </data>
+  <data name="Label_MarkedLines" xml:space="preserve">
+    <value>Marked lines</value>
+  </data>
+  <data name="Label_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Label_SettingsPopup" xml:space="preserve">
+    <value>Settings...</value>
+  </data>
+  <data name="Label_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Label_Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Label_Url" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="Label_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Label_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Title_OptionsForm" xml:space="preserve">
+    <value>Crayon Code Snippet Plug-in Options</value>
+  </data>
+	<data name="Label_Themes" xml:space="preserve">
+    <value>Themes</value>
+  </data>
+	<data name="Help_CustomOptions_Themes" xml:space="preserve">
+    <value>Themes</value>
+  </data>
+	<data name="Label_Languages" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+	<data name="Help_CustomOptions_Languages" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+	<data name="Label_Fonts" xml:space="preserve">
+    <value>Fonts</value>
+  </data>
+	<data name="Help_CustomOptions_Fonts" xml:space="preserve">
+    <value>Fonts</value>
+  </data>
+	<data name="Label_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+	<data name="Help_Theme_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+	<data name="Help_Font_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+	<data name="Label_FontSize" xml:space="preserve">
+    <value>Font size</value>
+  </data>
+	<data name="Help_Font_FontSize" xml:space="preserve">
+    <value>Font size</value>
+  </data>
+	<data name="Label_Width" xml:space="preserve">
+    <value>Width</value>
+  </data>
+	<data name="Help_Metrics_Width" xml:space="preserve">
+    <value>Width</value>
+  </data>
+	<data name="Label_Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+	<data name="Help_Metrics_Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+	<data name="Label_TopMargin" xml:space="preserve">
+    <value>Top margin</value>
+  </data>
+	<data name="Help_Metrics_TopMargin" xml:space="preserve">
+    <value>Top margin</value>
+  </data>
+	<data name="Label_RightMargin" xml:space="preserve">
+    <value>Right margin</value>
+  </data>
+	<data name="Help_Metrics_RightMargin" xml:space="preserve">
+    <value>Right margin</value>
+  </data>
+	<data name="Label_BottomMargin" xml:space="preserve">
+    <value>Bottom margin</value>
+  </data>
+	<data name="Help_Metrics_BottomMargin" xml:space="preserve">
+    <value>Bottom margin</value>
+  </data>
+	<data name="Label_LeftMargin" xml:space="preserve">
+    <value>Left margin</value>
+  </data>
+	<data name="Help_Metrics_LeftMargin" xml:space="preserve">
+    <value>Left margin</value>
+  </data>
+	<data name="Label_HorizontalAlignment" xml:space="preserve">
+    <value>Horizontal alignment</value>
+  </data>
+	<data name="Help_Metrics_HorizontalAlignment" xml:space="preserve">
+    <value>Horizontal alignment</value>
+  </data>
+	<data name="Label_AllowFloatingElementsToSurroundCrayon" xml:space="preserve">
+    <value>Allow floating elements to surround crayon</value>
+  </data>
+	<data name="Help_Metrics_AllowFloatingElementsToSurroundCrayon" xml:space="preserve">
+    <value>Allow floating elements to surround crayon</value>
+  </data>
+	<data name="Label_InlineMargin" xml:space="preserve">
+    <value>Inline margin</value>
+  </data>
+	<data name="Help_Metrics_InlineMargin" xml:space="preserve">
+    <value>Inline margin</value>
+  </data>
+	<data name="Label_Display" xml:space="preserve">
+    <value>Display</value>
+  </data>
+	<data name="Help_Toolbar_Display" xml:space="preserve">
+    <value>Display</value>
+  </data>
+	<data name="Label_OverlayOnCode" xml:space="preserve">
+    <value>Overlay on code</value>
+  </data>
+	<data name="Help_Toolbar_OverlayOnCode" xml:space="preserve">
+    <value>Overlay on code</value>
+  </data>
+	<data name="Label_ToggleOnSingleClickWhenOverlayed" xml:space="preserve">
+    <value>Toggle on single click when overlayed</value>
+  </data>
+	<data name="Help_Toolbar_ToggleOnSingleClickWhenOverlayed" xml:space="preserve">
+    <value>Toggle on single click when overlayed</value>
+  </data>
+	<data name="Label_DelayHideOnMouseOut" xml:space="preserve">
+    <value>Delay hide on mouse out</value>
+  </data>
+	<data name="Help_Toolbar_DelayHideOnMouseOut" xml:space="preserve">
+    <value>Delay hide on mouse out</value>
+  </data>
+	<data name="Label_ShowTitle" xml:space="preserve">
+    <value>Show title</value>
+  </data>
+	<data name="Help_Toolbar_ShowTitle" xml:space="preserve">
+    <value>Show title</value>
+  </data>
+	<data name="Label_LanguageDisplay" xml:space="preserve">
+    <value>Language display</value>
+  </data>
+	<data name="Help_Toolbar_LanguageDisplay" xml:space="preserve">
+    <value>Language display</value>
+  </data>
+	<data name="Label_StripedLines" xml:space="preserve">
+    <value>Striped lines</value>
+  </data>
+	<data name="Help_Lines_StripedLines" xml:space="preserve">
+    <value>Striped lines</value>
+  </data>
+	<data name="Label_EnableLineMarking" xml:space="preserve">
+    <value>Enable line marking</value>
+  </data>
+	<data name="Help_Lines_EnableLineMarking" xml:space="preserve">
+    <value>Enable line marking</value>
+  </data>
+	<data name="Label_EnableLineRanges" xml:space="preserve">
+    <value>Enable line ranges</value>
+  </data>
+	<data name="Help_Lines_EnableLineRanges" xml:space="preserve">
+    <value>Enable line ranges</value>
+  </data>
+	<data name="Label_DisplayNumbersByDefault" xml:space="preserve">
+    <value>Display numbers by default</value>
+  </data>
+	<data name="Help_Lines_DisplayNumbersByDefault" xml:space="preserve">
+    <value>Display numbers by default</value>
+  </data>
+	<data name="Label_EnableLineNumberToggling" xml:space="preserve">
+    <value>Enable line number toggling</value>
+  </data>
+	<data name="Help_Lines_EnableLineNumberToggling" xml:space="preserve">
+    <value>Enable line number toggling</value>
+  </data>
+	<data name="Label_WrapLinesByDefault" xml:space="preserve">
+    <value>Wrap lines by default</value>
+  </data>
+	<data name="Help_Lines_WrapLinesByDefault" xml:space="preserve">
+    <value>Wrap lines by default</value>
+  </data>
+	<data name="Label_EnableLineWrapToggling" xml:space="preserve">
+    <value>Enable line wrap toggling</value>
+  </data>
+	<data name="Help_Lines_EnableLineWrapToggling" xml:space="preserve">
+    <value>Enable line wrap toggling</value>
+  </data>
+	<data name="Label_StartingLineNumber" xml:space="preserve">
+    <value>Starting line number</value>
+  </data>
+	<data name="Help_Lines_StartingLineNumber" xml:space="preserve">
+    <value>Starting line number</value>
+  </data>
+	<data name="Label_EnablePlainCodeView" xml:space="preserve">
+    <value>Enable plain code view</value>
+  </data>
+	<data name="Help_Code_EnablePlainCodeView" xml:space="preserve">
+    <value>Enable plain code view</value>
+  </data>
+	<data name="Label_PlainCodeViewDisplayTrigger" xml:space="preserve">
+    <value>Plain code view display trigger</value>
+  </data>
+	<data name="Help_Code_PlainCodeViewDisplayTrigger" xml:space="preserve">
+    <value>Plain code view display trigger</value>
+  </data>
+	<data name="Label_EnablePlainCodeToggling" xml:space="preserve">
+    <value>Enable plain code toggling</value>
+  </data>
+	<data name="Help_Code_EnablePlainCodeToggling" xml:space="preserve">
+    <value>Enable plain code toggling</value>
+  </data>
+	<data name="Label_ShowPlainCodeByDefault" xml:space="preserve">
+    <value>Show plain code by default</value>
+  </data>
+	<data name="Help_Code_ShowPlainCodeByDefault" xml:space="preserve">
+    <value>Show plain code by default</value>
+  </data>
+	<data name="Label_EnableCopyPaste" xml:space="preserve">
+    <value>Enable copy paste</value>
+  </data>
+	<data name="Help_Code_EnableCopyPaste" xml:space="preserve">
+    <value>Enable copy paste</value>
+  </data>
+	<data name="Label_EnableOpenInNewWindow" xml:space="preserve">
+    <value>Enable open in new window</value>
+  </data>
+	<data name="Help_Code_EnableOpenInNewWindow" xml:space="preserve">
+    <value>Enable open in new window</value>
+  </data>
+	<data name="Label_AlwaysDisplayScrollbars" xml:space="preserve">
+    <value>Always display scrollbars</value>
+  </data>
+	<data name="Help_Code_AlwaysDisplayScrollbars" xml:space="preserve">
+    <value>Always display scrollbars</value>
+  </data>
+	<data name="Label_MinimizeCode" xml:space="preserve">
+    <value>Minimize code</value>
+  </data>
+	<data name="Help_Code_MinimizeCode" xml:space="preserve">
+    <value>Minimize code</value>
+  </data>
+	<data name="Label_ExpandCodeBeyondPageBorderOnMouseHover" xml:space="preserve">
+    <value>Expand code beyond page border on mouse hover</value>
+  </data>
+	<data name="Help_Code_ExpandCodeBeyondPageBorderOnMouseHover" xml:space="preserve">
+    <value>Expand code beyond page border on mouse hover</value>
+  </data>
+	<data name="Label_EnableCodeExpandingToggling" xml:space="preserve">
+    <value>Enable code expanding toggling</value>
+  </data>
+	<data name="Help_Code_EnableCodeExpandingToggling" xml:space="preserve">
+    <value>Enable code expanding toggling</value>
+  </data>
+	<data name="Label_DecodeHtmlEntitiesInAttributes" xml:space="preserve">
+    <value>Decode html entities in attributes</value>
+  </data>
+	<data name="Help_Code_DecodeHtmlEntitiesInAttributes" xml:space="preserve">
+    <value>Decode html entities in attributes</value>
+  </data>
+	<data name="Label_RemoveWhitespacesSurroundingShortcodeContent" xml:space="preserve">
+    <value>Remove whitespaces surrounding shortcode content</value>
+  </data>
+	<data name="Help_Code_RemoveWhitespacesSurroundingShortcodeContent" xml:space="preserve">
+    <value>Remove whitespaces surrounding shortcode content</value>
+  </data>
+	<data name="Label_RemoveCodeTagsSurroundingShortcodeContent" xml:space="preserve">
+    <value>Remove code tags surrounding shortcode content</value>
+  </data>
+	<data name="Help_Code_RemoveCodeTagsSurroundingShortcodeContent" xml:space="preserve">
+    <value>Remove code tags surrounding shortcode content</value>
+  </data>
+	<data name="Label_AllowMixedLanguageHighlightingWithDelimitersAndTags" xml:space="preserve">
+    <value>Allow mixed language highlighting with delimiters and tags</value>
+  </data>
+	<data name="Help_Code_AllowMixedLanguageHighlightingWithDelimitersAndTags" xml:space="preserve">
+    <value>Allow mixed language highlighting with delimiters and tags</value>
+  </data>
+	<data name="Label_ShowMixedLanguageIcon" xml:space="preserve">
+    <value>Show mixed language icon</value>
+  </data>
+	<data name="Help_Code_ShowMixedLanguageIcon" xml:space="preserve">
+    <value>Show mixed language icon</value>
+  </data>
+	<data name="Label_TabSizeInSpaces" xml:space="preserve">
+    <value>Tab size in spaces</value>
+  </data>
+	<data name="Help_Code_TabSizeInSpaces" xml:space="preserve">
+    <value>Tab size in spaces</value>
+  </data>
+	<data name="Label_BlankLinesBeforeCode" xml:space="preserve">
+    <value>Blank lines before code</value>
+  </data>
+	<data name="Help_Code_BlankLinesBeforeCode" xml:space="preserve">
+    <value>Blank lines before code</value>
+  </data>
+	<data name="Label_BlankLinesAfterCode" xml:space="preserve">
+    <value>Blank lines after code</value>
+  </data>
+	<data name="Help_Code_BlankLinesAfterCode" xml:space="preserve">
+    <value>Blank lines after code</value>
+  </data>
+	<data name="Help_Content_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+	<data name="Help_Content_Inline" xml:space="preserve">
+    <value>Inline</value>
+  </data>
+	<data name="Help_Content_DontHighlight" xml:space="preserve">
+    <value>Dont highlight</value>
+  </data>
+	<data name="Help_Content_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+	<data name="Help_Content_LineRange" xml:space="preserve">
+    <value>Line range</value>
+  </data>
+	<data name="Help_Content_MarkedLines" xml:space="preserve">
+    <value>Marked lines</value>
+  </data>
+	<data name="Label_Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+	<data name="Help_Content_Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+	<data name="Help_Content_Url" xml:space="preserve">
+    <value>Url</value>
+  </data>
+</root>
