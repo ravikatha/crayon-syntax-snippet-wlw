@@ -115,6 +115,9 @@ namespace DC.Crayon.Wlw
 			preElement.Attributes["id"] = elementId;
 			content.Properties[_elementIdProperty] = elementId;
 
+			// Decode
+			classAttrParts["decode"] = "true";
+
 			// Setting Groups
 			ApplyContentSettings(true, preElement, classAttrParts, styleAttr, options);
 			ApplyMetricsSettings(true, preElement, classAttrParts, styleAttr, options);
@@ -162,6 +165,9 @@ namespace DC.Crayon.Wlw
 			HtmlElement preElement = new HtmlElement() { Tag = "pre" };
 			OrderedDictionary classAttrParts = new OrderedDictionary(StringComparer.Ordinal);
 			OrderedDictionary styleAttr = new OrderedDictionary(StringComparer.Ordinal);
+
+			// Decode
+			classAttrParts["decode"] = "true";
 
 			// Setting Groups
 			ApplyContentSettings(false, preElement, classAttrParts, styleAttr, options);
