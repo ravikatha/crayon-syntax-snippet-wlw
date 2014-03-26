@@ -24,9 +24,11 @@ namespace DC.Crayon.Wlw.Framework
 		/// <returns>Control</returns>
 		public override Control CreateEditorControl(Control parentControl, object value, IProperties pluginProperties)
 		{
-			TextBox textBox = new TextBox();
+			CustomTextBox textBox = new CustomTextBox();
 			textBox.Text = value.ToString();
 			textBox.Name = FullName;
+			textBox.Pasted += (s, e) => textBox.Text = Utils.RemoveLineWhiteSpaces(textBox.Text, true, true, true);
+			textBox.Leave += (s, e) => textBox.Text = Utils.RemoveLineWhiteSpaces(textBox.Text, true, true, true);
 			return textBox;
 		}
 

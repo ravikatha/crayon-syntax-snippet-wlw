@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace DC.Crayon.Wlw
 {
@@ -246,6 +247,74 @@ namespace DC.Crayon.Wlw
 					targetProp.SetValue(target, srcProp.GetValue(source));
 				}
 			}
+		}
+
+		private static readonly Regex _intralineRegex = new Regex(@"(?<a>\S)\s+(?<b>\S)", RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.IgnoreCase);
+		/// <summary>
+		/// Removes white spaces in each line
+		/// </summary>
+		/// <param name="text">Text</param>
+		/// <param name="removeLeadingWhiteSpaces">Whether to remove leading white spaces</param>
+		/// <param name="removeIntralineWhiteSpaces">Whether to remove white spaces inside each line</param>
+		/// <param name="removeTrailingWhiteSpaces">Whether to remove trailing white spaces</param>
+		/// <returns>Trimmed text</returns>
+		public static string RemoveLineWhiteSpaces(string text, bool removeLeadingWhiteSpaces, bool removeIntralineWhiteSpaces, bool removeTrailingWhiteSpaces)
+		{
+			if (text == null)
+			{
+				return null;
+			}
+
+			string[] lines = text.Split(new string[] {"\r\n", "\n", "\r"}, StringSplitOptions.None);
+			return string.Join(Environment.NewLine, lines.Select(l =>
+			{
+				string trimmedLine = l;
+				if (removeLeadingWhiteSpaces)
+				{
+					trimmedLine = trimmedLine.TrimStart();
+				}
+				if (removeTrailingWhiteSpaces)
+				{
+					trimmedLine = trimmedLine.TrimEnd();
+				}
+				if (removeIntralineWhiteSpaces)
+				{
+					trimmedLine = _intralineRegex.Replace(trimmedLine, m => m.Groups["a"].Value + m.Groups["b"].Value);
+				}
+				return trimmedLine;
+			}).ToArray());
+		}
+
+		/// <summary>
+		/// Unindents all lines to start from the first column, while keeping the inter-line indentation intact
+		/// </summary>
+		/// <param name="text">Text to unindent</param>
+		/// <param name="tabSpaces">Number of spaces to replace a tab with</param>
+		/// <returns>Unindented text</returns>
+		public static string UnindentLines(string text, int tabSpaces = 4)
+		{
+			if (text == null)
+			{
+				return null;
+			}
+
+			// Replace tabs with spaces
+			var tabSpacesBuffer = new StringBuilder();
+			for (var i = 0; i < Math.Max(tabSpaces, 0); ++i)
+			{
+				tabSpacesBuffer.Append(" ");
+			}
+			text = text.Replace("\t", tabSpacesBuffer.ToString());
+
+			// Divide into lines
+			string[] lines = text.Split(new string[] { "\r\n", "\n", "\r" }, StringSplitOptions.None);
+			string[] nonEmptyLines = lines.Where(l => l.Trim().Length > 0).ToArray();
+			int minLeadingSpaces = lines.Min(l => (l.Trim().Length == 0) ? int.MaxValue : (l.Length - l.TrimStart().Length));
+			if (minLeadingSpaces == 0)
+			{
+				return text;
+			}
+			return string.Join(Environment.NewLine, lines.Select(l => l.Substring(Math.Min(minLeadingSpaces, l.Length)).TrimEnd()).ToArray());
 		}
 	}
 }

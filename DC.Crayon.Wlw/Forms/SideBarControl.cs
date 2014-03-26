@@ -62,6 +62,14 @@ namespace DC.Crayon.Wlw.Forms
 			if (initializeControls)
 			{
 				titleLabel.Text = new ResourceManager(typeof(CrayonSnippetPlugin)).GetString("InsertableContentSource.SidebarText") ?? titleLabel.Text;
+				titleTextBox.Pasted += (s, e) => titleTextBox.Text = Utils.RemoveLineWhiteSpaces(titleTextBox.Text, true, false, true);
+				titleTextBox.Leave += (s, e) => titleTextBox.Text = Utils.RemoveLineWhiteSpaces(titleTextBox.Text, true, false, true);
+				lineRangeTextBox.Pasted += (s, e) => lineRangeTextBox.Text = Utils.RemoveLineWhiteSpaces(lineRangeTextBox.Text, true, true, true);
+				lineRangeTextBox.Leave += (s, e) => lineRangeTextBox.Text = Utils.RemoveLineWhiteSpaces(lineRangeTextBox.Text, true, true, true);
+				markedLinesTextBox.Pasted += (s, e) => markedLinesTextBox.Text = Utils.RemoveLineWhiteSpaces(markedLinesTextBox.Text, true, true, true);
+				markedLinesTextBox.Leave += (s, e) => markedLinesTextBox.Text = Utils.RemoveLineWhiteSpaces(markedLinesTextBox.Text, true, true, true);
+				codeTextBox.Pasted += (s, e) => codeTextBox.Text = Utils.UnindentLines(codeTextBox.Text);
+				codeTextBox.Leave += (s, e) => codeTextBox.Text = Utils.UnindentLines(codeTextBox.Text);
 				updateButton.Text = Resources.Label_Update;
 				resetButton.Text = Resources.Label_Reset;
 				overridesButton.Text = Resources.Label_Override;

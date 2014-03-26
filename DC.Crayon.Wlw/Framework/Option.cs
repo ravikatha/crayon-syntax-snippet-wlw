@@ -294,7 +294,7 @@ namespace DC.Crayon.Wlw.Framework
 			}
 			else
 			{
-				TextBox textBox = new TextBox();
+				CustomTextBox textBox = new CustomTextBox();
 				textBox.Text = value.ToString();
 				control = textBox;
 			}

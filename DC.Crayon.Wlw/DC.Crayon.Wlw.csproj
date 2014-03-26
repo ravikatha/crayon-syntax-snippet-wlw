@@ -68,6 +68,9 @@
     <Compile Include="Framework\FontSizeOption.cs" />
     <Compile Include="Framework\WidthOrHeightOption.cs" />
     <Compile Include="Framework\LanguageOption.cs" />
+    <Compile Include="Types\CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Types\HtmlElement.cs" />
     <Compile Include="Types\ListItem.cs" />
     <Compile Include="Framework\Option.cs" />

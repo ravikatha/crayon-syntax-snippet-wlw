@@ -20,16 +20,22 @@ namespace DC.Crayon.Wlw.Framework
 		/// <returns>Control</returns>
 		public override Control CreateEditorControl(Control parentControl, object value, IProperties pluginProperties)
 		{
-			TextBox textBox = new TextBox();
+			CustomTextBox textBox = new CustomTextBox();
 			ListItem[] listItems = value as ListItem[];
 
 			textBox.Text = string.Join(Environment.NewLine,
 				listItems.Where(l => (l != null) && (l.Value != null))
 						.Select(l => l.Value + ";" + (l.Text ?? l.Value)).ToArray());
 			textBox.Multiline = true;
+			textBox.WordWrap = false;
 			textBox.ScrollBars = ScrollBars.Both;
 			textBox.Height = Height;
 
+			// Remove leading & trailing spaces
+			textBox.Pasted += (s, e) => textBox.Text = Utils.RemoveLineWhiteSpaces(textBox.Text, true, false, true);
+			textBox.Leave += (s, e) => textBox.Text = Utils.RemoveLineWhiteSpaces(textBox.Text, true, false, true);
+
+			// Return
 			textBox.Name = FullName;
 			return textBox;
 		}

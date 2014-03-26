@@ -45,13 +45,15 @@ namespace DC.Crayon.Wlw.Framework
 		/// <returns>Control</returns>
 		public override Control CreateEditorControl(Control parentControl, object value, IProperties pluginProperties)
 		{
-			TextBox textBox = new TextBox();
+			CustomTextBox textBox = new CustomTextBox();
 
 			textBox.Text = value.ToString();
 			textBox.Multiline = true;
+			textBox.WordWrap = false;
 			textBox.ScrollBars = ScrollBars.Both;
 			textBox.Height = Height;
-
+			textBox.Pasted += (s, e) => textBox.Text = Utils.UnindentLines(textBox.Text);
+			textBox.Leave += (s, e) => textBox.Text = Utils.UnindentLines(textBox.Text);
 			textBox.Name = FullName;
 			return textBox;
 		}

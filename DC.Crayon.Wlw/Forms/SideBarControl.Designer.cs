@@ -38,19 +38,19 @@
 			this.overridesButton = new System.Windows.Forms.Button();
 			this.resetButton = new System.Windows.Forms.Button();
 			this.updateButton = new System.Windows.Forms.Button();
-			this.urlTextBox = new System.Windows.Forms.TextBox();
+			this.urlTextBox = new CustomTextBox();
 			this.urlFieldLabel = new System.Windows.Forms.Label();
-			this.codeTextBox = new System.Windows.Forms.TextBox();
+			this.codeTextBox = new CustomTextBox();
 			this.codeFieldLabel = new System.Windows.Forms.Label();
-			this.markedLinesTextBox = new System.Windows.Forms.TextBox();
+			this.markedLinesTextBox = new CustomTextBox();
 			this.markedLinesFieldLabel = new System.Windows.Forms.Label();
-			this.lineRangeTextBox = new System.Windows.Forms.TextBox();
+			this.lineRangeTextBox = new CustomTextBox();
 			this.lineRangeFieldLabel = new System.Windows.Forms.Label();
 			this.languageComboBox = new System.Windows.Forms.ComboBox();
 			this.languageFieldLabel = new System.Windows.Forms.Label();
 			this.dontHighlightCheckBox = new System.Windows.Forms.CheckBox();
 			this.inlineCheckBox = new System.Windows.Forms.CheckBox();
-			this.titleTextBox = new System.Windows.Forms.TextBox();
+			this.titleTextBox = new CustomTextBox();
 			this.titleFieldLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
 			this.panel.SuspendLayout();
@@ -182,6 +182,7 @@
 			this.codeTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
 			this.codeTextBox.Size = new System.Drawing.Size(175, 143);
 			this.codeTextBox.TabIndex = 30;
+			this.codeTextBox.WordWrap = false;
 			// 
 			// codeFieldLabel
 			// 
@@ -315,19 +316,19 @@
 		private System.Windows.Forms.Button overridesButton;
 		private System.Windows.Forms.Button resetButton;
 		private System.Windows.Forms.Button updateButton;
-		private System.Windows.Forms.TextBox urlTextBox;
+		private CustomTextBox urlTextBox;
 		private System.Windows.Forms.Label urlFieldLabel;
-		private System.Windows.Forms.TextBox codeTextBox;
+		private CustomTextBox codeTextBox;
 		private System.Windows.Forms.Label codeFieldLabel;
-		private System.Windows.Forms.TextBox markedLinesTextBox;
+		private CustomTextBox markedLinesTextBox;
 		private System.Windows.Forms.Label markedLinesFieldLabel;
-		private System.Windows.Forms.TextBox lineRangeTextBox;
+		private CustomTextBox lineRangeTextBox;
 		private System.Windows.Forms.Label lineRangeFieldLabel;
 		private System.Windows.Forms.ComboBox languageComboBox;
 		private System.Windows.Forms.Label languageFieldLabel;
 		private System.Windows.Forms.CheckBox dontHighlightCheckBox;
 		private System.Windows.Forms.CheckBox inlineCheckBox;
-		private System.Windows.Forms.TextBox titleTextBox;
+		private CustomTextBox titleTextBox;
 		private System.Windows.Forms.Label titleFieldLabel;
 
 
