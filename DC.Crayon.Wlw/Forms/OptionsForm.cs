@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -108,9 +109,32 @@ namespace DC.Crayon.Wlw.Forms
 			Process.Start(new ProcessStartInfo("http://www.dotcastle.com/blog"));
 		}
 
-		private void OnWebClick(object sender, EventArgs e)
+		private void OnWebClick(object sender, LinkLabelLinkClickedEventArgs e)
 		{
 			Process.Start(new ProcessStartInfo("http://www.dotcastle.com"));
+		}
+
+		private void OnGitClick(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(new ProcessStartInfo("https://github.com/dotcastle/crayon-syntax-snippet-wlw"));
+		}
+
+		private void OnHelpClick(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(new ProcessStartInfo("http://www.dotcastle.com/blog/default/tools-plug-ins/crayon-syntax-highlighter-plugin-for-windows-live-writer"));
+		}
+
+		private void OnCrayonGitClick(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Process.Start(new ProcessStartInfo("https://github.com/aramk/crayon-syntax-highlighter"));
+		}
+
+		private void OnLicenseClick(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			if (Updater.InstalledVersion.InstallFolder != null)
+			{
+				Process.Start(new ProcessStartInfo(Path.Combine(Updater.InstalledVersion.InstallFolder, "License.rtf")));
+			}
 		}
 		#endregion
 	}

@@ -29,22 +29,46 @@ namespace DC.Crayon.Wlw
 			set;
 		}
 
+		private string _installFolder;
+		/// <summary>
+		/// Install folder
+		/// </summary>
+		public string InstallFolder
+		{
+			get { return _installFolder; }
+			set
+			{
+				var val = (value ?? string.Empty).Trim();
+				_installFolder = (val.Length == 0) ? null : val;
+			}
+		}
+
+		private string _downloadUrl;
 		/// <summary>
 		/// Download url
 		/// </summary>
 		public string DownloadUrl
 		{
-			get;
-			set;
+			get { return _downloadUrl; }
+			set
+			{
+				var val = (value ?? string.Empty).Trim();
+				_downloadUrl = (val.Length == 0) ? null : val;
+			}
 		}
 
+		private string _downloadContentType;
 		/// <summary>
 		/// Content type of the download
 		/// </summary>
 		public string DownloadContentType
 		{
-			get;
-			set;
+			get { return _downloadContentType; }
+			set
+			{
+				var val = (value ?? string.Empty).Trim();
+				_downloadContentType = (val.Length == 0) ? null : val;
+			}
 		}
 		#endregion
 	}

@@ -47,6 +47,10 @@
 			this.includePreReleaseVersionsCheckbox = new System.Windows.Forms.CheckBox();
 			this.checkForUpdatesCheckbox = new System.Windows.Forms.CheckBox();
 			this.aboutTabPage = new System.Windows.Forms.TabPage();
+			this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+			this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+			this.label1 = new System.Windows.Forms.Label();
 			this.linkLabel3 = new System.Windows.Forms.LinkLabel();
 			this.linkLabel2 = new System.Windows.Forms.LinkLabel();
 			this.label4 = new System.Windows.Forms.Label();
@@ -54,6 +58,8 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.productNameLabel = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.linkLabel6 = new System.Windows.Forms.LinkLabel();
 			((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
 			this.tabControl.SuspendLayout();
 			this.settingsTabPage.SuspendLayout();
@@ -231,6 +237,12 @@
 			// 
 			// aboutTabPage
 			// 
+			this.aboutTabPage.Controls.Add(this.linkLabel6);
+			this.aboutTabPage.Controls.Add(this.label5);
+			this.aboutTabPage.Controls.Add(this.linkLabel5);
+			this.aboutTabPage.Controls.Add(this.linkLabel4);
+			this.aboutTabPage.Controls.Add(this.linkLabel1);
+			this.aboutTabPage.Controls.Add(this.label1);
 			this.aboutTabPage.Controls.Add(this.linkLabel3);
 			this.aboutTabPage.Controls.Add(this.linkLabel2);
 			this.aboutTabPage.Controls.Add(this.label4);
@@ -244,6 +256,54 @@
 			this.aboutTabPage.TabIndex = 2;
 			this.aboutTabPage.Text = "About";
 			this.aboutTabPage.UseVisualStyleBackColor = true;
+			// 
+			// linkLabel5
+			// 
+			this.linkLabel5.Dock = System.Windows.Forms.DockStyle.Top;
+			this.linkLabel5.Location = new System.Drawing.Point(0, 242);
+			this.linkLabel5.Name = "linkLabel5";
+			this.linkLabel5.Size = new System.Drawing.Size(726, 15);
+			this.linkLabel5.TabIndex = 12;
+			this.linkLabel5.TabStop = true;
+			this.linkLabel5.Text = "crayon git: https://github.com/aramk/crayon-syntax-highlighter";
+			this.linkLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.linkLabel5.VisitedLinkColor = System.Drawing.Color.Blue;
+			this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnCrayonGitClick);
+			// 
+			// linkLabel4
+			// 
+			this.linkLabel4.Dock = System.Windows.Forms.DockStyle.Top;
+			this.linkLabel4.Location = new System.Drawing.Point(0, 227);
+			this.linkLabel4.Name = "linkLabel4";
+			this.linkLabel4.Size = new System.Drawing.Size(726, 15);
+			this.linkLabel4.TabIndex = 11;
+			this.linkLabel4.TabStop = true;
+			this.linkLabel4.Text = "help: http://www.dotcastle.com/blog/default/tools-plug-ins/crayon-syntax-highligh" +
+    "ter-plugin-for-windows-live-writer";
+			this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.linkLabel4.VisitedLinkColor = System.Drawing.Color.Blue;
+			this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnHelpClick);
+			// 
+			// linkLabel1
+			// 
+			this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+			this.linkLabel1.Location = new System.Drawing.Point(0, 212);
+			this.linkLabel1.Name = "linkLabel1";
+			this.linkLabel1.Size = new System.Drawing.Size(726, 15);
+			this.linkLabel1.TabIndex = 10;
+			this.linkLabel1.TabStop = true;
+			this.linkLabel1.Text = "git: https://github.com/dotcastle/crayon-syntax-snippet-wlw";
+			this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Blue;
+			this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnGitClick);
+			// 
+			// label1
+			// 
+			this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label1.Location = new System.Drawing.Point(0, 187);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(726, 25);
+			this.label1.TabIndex = 9;
 			// 
 			// linkLabel3
 			// 
@@ -269,7 +329,7 @@
 			this.linkLabel2.Text = "www: http://www.dotcastle.com";
 			this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Blue;
-			this.linkLabel2.Click += new System.EventHandler(this.OnWebClick);
+			this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnWebClick);
 			// 
 			// label4
 			// 
@@ -329,6 +389,27 @@
 			this.productNameLabel.Text = "Crayon Code Snippet Plug-in for Windows Live Writer";
 			this.productNameLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
+			// label5
+			// 
+			this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label5.Location = new System.Drawing.Point(0, 257);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(726, 25);
+			this.label5.TabIndex = 13;
+			// 
+			// linkLabel6
+			// 
+			this.linkLabel6.Dock = System.Windows.Forms.DockStyle.Top;
+			this.linkLabel6.Location = new System.Drawing.Point(0, 282);
+			this.linkLabel6.Name = "linkLabel6";
+			this.linkLabel6.Size = new System.Drawing.Size(726, 15);
+			this.linkLabel6.TabIndex = 14;
+			this.linkLabel6.TabStop = true;
+			this.linkLabel6.Text = "View License";
+			this.linkLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.linkLabel6.VisitedLinkColor = System.Drawing.Color.Blue;
+			this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnLicenseClick);
+			// 
 			// OptionsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,5 +466,11 @@
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button checkNowButton;
+		private System.Windows.Forms.LinkLabel linkLabel5;
+		private System.Windows.Forms.LinkLabel linkLabel4;
+		private System.Windows.Forms.LinkLabel linkLabel1;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.LinkLabel linkLabel6;
+		private System.Windows.Forms.Label label5;
 	}
 }

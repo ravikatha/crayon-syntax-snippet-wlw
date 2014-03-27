@@ -29,6 +29,7 @@ namespace DC.Crayon.Wlw
 		private const string _registryVersionKeyPath = "Software\\DotCastle\\DC.Crayon.Wlw";
 		private const string _registryVersionValueName = "Version";
 		private const string _registryPreReleaseValueName = "PreRelease";
+		private const string _registryLocationValueName = "Location";
 
 		private const string _gitReleaseListUrl = "https://api.github.com/repos/dotcastle/crayon-syntax-snippet-wlw/releases";
 		private const string _gitSetupAssetName = "DC.Crayon.Wlw.Setup.msi";
@@ -67,13 +68,15 @@ namespace DC.Crayon.Wlw
 				{
 					var verValue = regKey.GetValue(_registryVersionValueName, _defaultVersion, RegistryValueOptions.None) as string;
 					var preReleaseValue = (int)regKey.GetValue(_registryPreReleaseValueName, 0, RegistryValueOptions.None);
+					var locationValue = regKey.GetValue(_registryLocationValueName, null, RegistryValueOptions.None) as string;
 
 					if (verValue != null)
 					{
 						return new VersionInfo()
 						{
 							Version = new Version(verValue),
-							PreRelease = (preReleaseValue != 0)
+							PreRelease = (preReleaseValue != 0),
+							InstallFolder = locationValue
 						};
 					}
 				}

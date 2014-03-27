@@ -102,6 +102,7 @@
 							<RegistryValue Root="HKLM" Key="Software\Microsoft\Windows Live\Writer\PluginAssemblies" Name="$(var.PluginRegistryName)" Type="string" Value="[PRODUCTDIR]$(var.DC.Crayon.Wlw.TargetFileName)" />
 							<RegistryValue Root="HKLM" Key="Software\$(var.Company)\$(var.PluginRegistryName)" Name="Version" Type="string" Value="$(var.ProductVersion)" />
 							<RegistryValue Root="HKLM" Key="Software\$(var.Company)\$(var.PluginRegistryName)" Name="PreRelease" Type="integer" Value="$(var.ProductVersionPreReleaseFlag)" />
+							<RegistryValue Root="HKLM" Key="Software\$(var.Company)\$(var.PluginRegistryName)" Name="Location" Type="string" Value="[PRODUCTDIR]" />
 							<RemoveFolder Id="RemoveProductDir" Directory="PRODUCTDIR" On="uninstall" />
 							<RemoveFolder Id="RemoveCompanyDir" Directory="COMPANYDIR" On="uninstall" />
 						</Component>
