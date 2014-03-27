@@ -205,310 +205,370 @@
   <data name="Title_OptionsForm" xml:space="preserve">
     <value>Crayon Code Snippet Plug-in Options</value>
   </data>
-	<data name="Label_Themes" xml:space="preserve">
+  <data name="Label_Themes" xml:space="preserve">
     <value>Themes</value>
   </data>
-	<data name="Help_CustomOptions_Themes" xml:space="preserve">
+  <data name="Help_CustomOptions_Themes" xml:space="preserve">
     <value>Themes</value>
   </data>
-	<data name="Label_Languages" xml:space="preserve">
+  <data name="Label_Languages" xml:space="preserve">
     <value>Languages</value>
   </data>
-	<data name="Help_CustomOptions_Languages" xml:space="preserve">
+  <data name="Help_CustomOptions_Languages" xml:space="preserve">
     <value>Languages</value>
   </data>
-	<data name="Label_Fonts" xml:space="preserve">
+  <data name="Label_Fonts" xml:space="preserve">
     <value>Fonts</value>
   </data>
-	<data name="Help_CustomOptions_Fonts" xml:space="preserve">
+  <data name="Help_CustomOptions_Fonts" xml:space="preserve">
     <value>Fonts</value>
   </data>
-	<data name="Label_Name" xml:space="preserve">
+  <data name="Label_Name" xml:space="preserve">
     <value>Name</value>
   </data>
-	<data name="Help_Theme_Name" xml:space="preserve">
+  <data name="Help_Theme_Name" xml:space="preserve">
     <value>Name</value>
   </data>
-	<data name="Help_Font_Name" xml:space="preserve">
+  <data name="Help_Font_Name" xml:space="preserve">
     <value>Name</value>
   </data>
-	<data name="Label_FontSize" xml:space="preserve">
+  <data name="Label_FontSize" xml:space="preserve">
     <value>Font size</value>
   </data>
-	<data name="Help_Font_FontSize" xml:space="preserve">
+  <data name="Help_Font_FontSize" xml:space="preserve">
     <value>Font size</value>
   </data>
-	<data name="Label_Width" xml:space="preserve">
+  <data name="Label_Width" xml:space="preserve">
     <value>Width</value>
   </data>
-	<data name="Help_Metrics_Width" xml:space="preserve">
+  <data name="Help_Metrics_Width" xml:space="preserve">
     <value>Width</value>
   </data>
-	<data name="Label_Height" xml:space="preserve">
+  <data name="Label_Height" xml:space="preserve">
     <value>Height</value>
   </data>
-	<data name="Help_Metrics_Height" xml:space="preserve">
+  <data name="Help_Metrics_Height" xml:space="preserve">
     <value>Height</value>
   </data>
-	<data name="Label_TopMargin" xml:space="preserve">
+  <data name="Label_TopMargin" xml:space="preserve">
     <value>Top margin</value>
   </data>
-	<data name="Help_Metrics_TopMargin" xml:space="preserve">
+  <data name="Help_Metrics_TopMargin" xml:space="preserve">
     <value>Top margin</value>
   </data>
-	<data name="Label_RightMargin" xml:space="preserve">
+  <data name="Label_RightMargin" xml:space="preserve">
     <value>Right margin</value>
   </data>
-	<data name="Help_Metrics_RightMargin" xml:space="preserve">
+  <data name="Help_Metrics_RightMargin" xml:space="preserve">
     <value>Right margin</value>
   </data>
-	<data name="Label_BottomMargin" xml:space="preserve">
+  <data name="Label_BottomMargin" xml:space="preserve">
     <value>Bottom margin</value>
   </data>
-	<data name="Help_Metrics_BottomMargin" xml:space="preserve">
+  <data name="Help_Metrics_BottomMargin" xml:space="preserve">
     <value>Bottom margin</value>
   </data>
-	<data name="Label_LeftMargin" xml:space="preserve">
+  <data name="Label_LeftMargin" xml:space="preserve">
     <value>Left margin</value>
   </data>
-	<data name="Help_Metrics_LeftMargin" xml:space="preserve">
+  <data name="Help_Metrics_LeftMargin" xml:space="preserve">
     <value>Left margin</value>
   </data>
-	<data name="Label_HorizontalAlignment" xml:space="preserve">
+  <data name="Label_HorizontalAlignment" xml:space="preserve">
     <value>Horizontal alignment</value>
   </data>
-	<data name="Help_Metrics_HorizontalAlignment" xml:space="preserve">
+  <data name="Help_Metrics_HorizontalAlignment" xml:space="preserve">
     <value>Horizontal alignment</value>
   </data>
-	<data name="Label_AllowFloatingElementsToSurroundCrayon" xml:space="preserve">
+  <data name="Label_AllowFloatingElementsToSurroundCrayon" xml:space="preserve">
     <value>Allow floating elements to surround crayon</value>
   </data>
-	<data name="Help_Metrics_AllowFloatingElementsToSurroundCrayon" xml:space="preserve">
+  <data name="Help_Metrics_AllowFloatingElementsToSurroundCrayon" xml:space="preserve">
     <value>Allow floating elements to surround crayon</value>
   </data>
-	<data name="Label_InlineMargin" xml:space="preserve">
+  <data name="Label_InlineMargin" xml:space="preserve">
     <value>Inline margin</value>
   </data>
-	<data name="Help_Metrics_InlineMargin" xml:space="preserve">
+  <data name="Help_Metrics_InlineMargin" xml:space="preserve">
     <value>Inline margin</value>
   </data>
-	<data name="Label_Display" xml:space="preserve">
+  <data name="Label_Display" xml:space="preserve">
     <value>Display</value>
   </data>
-	<data name="Help_Toolbar_Display" xml:space="preserve">
+  <data name="Help_Toolbar_Display" xml:space="preserve">
     <value>Display</value>
   </data>
-	<data name="Label_OverlayOnCode" xml:space="preserve">
+  <data name="Label_OverlayOnCode" xml:space="preserve">
     <value>Overlay on code</value>
   </data>
-	<data name="Help_Toolbar_OverlayOnCode" xml:space="preserve">
+  <data name="Help_Toolbar_OverlayOnCode" xml:space="preserve">
     <value>Overlay on code</value>
   </data>
-	<data name="Label_ToggleOnSingleClickWhenOverlayed" xml:space="preserve">
+  <data name="Label_ToggleOnSingleClickWhenOverlayed" xml:space="preserve">
     <value>Toggle on single click when overlayed</value>
   </data>
-	<data name="Help_Toolbar_ToggleOnSingleClickWhenOverlayed" xml:space="preserve">
+  <data name="Help_Toolbar_ToggleOnSingleClickWhenOverlayed" xml:space="preserve">
     <value>Toggle on single click when overlayed</value>
   </data>
-	<data name="Label_DelayHideOnMouseOut" xml:space="preserve">
+  <data name="Label_DelayHideOnMouseOut" xml:space="preserve">
     <value>Delay hide on mouse out</value>
   </data>
-	<data name="Help_Toolbar_DelayHideOnMouseOut" xml:space="preserve">
+  <data name="Help_Toolbar_DelayHideOnMouseOut" xml:space="preserve">
     <value>Delay hide on mouse out</value>
   </data>
-	<data name="Label_ShowTitle" xml:space="preserve">
+  <data name="Label_ShowTitle" xml:space="preserve">
     <value>Show title</value>
   </data>
-	<data name="Help_Toolbar_ShowTitle" xml:space="preserve">
+  <data name="Help_Toolbar_ShowTitle" xml:space="preserve">
     <value>Show title</value>
   </data>
-	<data name="Label_LanguageDisplay" xml:space="preserve">
+  <data name="Label_LanguageDisplay" xml:space="preserve">
     <value>Language display</value>
   </data>
-	<data name="Help_Toolbar_LanguageDisplay" xml:space="preserve">
+  <data name="Help_Toolbar_LanguageDisplay" xml:space="preserve">
     <value>Language display</value>
   </data>
-	<data name="Label_StripedLines" xml:space="preserve">
+  <data name="Label_StripedLines" xml:space="preserve">
     <value>Striped lines</value>
   </data>
-	<data name="Help_Lines_StripedLines" xml:space="preserve">
+  <data name="Help_Lines_StripedLines" xml:space="preserve">
     <value>Striped lines</value>
   </data>
-	<data name="Label_EnableLineMarking" xml:space="preserve">
+  <data name="Label_EnableLineMarking" xml:space="preserve">
     <value>Enable line marking</value>
   </data>
-	<data name="Help_Lines_EnableLineMarking" xml:space="preserve">
+  <data name="Help_Lines_EnableLineMarking" xml:space="preserve">
     <value>Enable line marking</value>
   </data>
-	<data name="Label_EnableLineRanges" xml:space="preserve">
+  <data name="Label_EnableLineRanges" xml:space="preserve">
     <value>Enable line ranges</value>
   </data>
-	<data name="Help_Lines_EnableLineRanges" xml:space="preserve">
+  <data name="Help_Lines_EnableLineRanges" xml:space="preserve">
     <value>Enable line ranges</value>
   </data>
-	<data name="Label_DisplayNumbersByDefault" xml:space="preserve">
+  <data name="Label_DisplayNumbersByDefault" xml:space="preserve">
     <value>Display numbers by default</value>
   </data>
-	<data name="Help_Lines_DisplayNumbersByDefault" xml:space="preserve">
+  <data name="Help_Lines_DisplayNumbersByDefault" xml:space="preserve">
     <value>Display numbers by default</value>
   </data>
-	<data name="Label_EnableLineNumberToggling" xml:space="preserve">
+  <data name="Label_EnableLineNumberToggling" xml:space="preserve">
     <value>Enable line number toggling</value>
   </data>
-	<data name="Help_Lines_EnableLineNumberToggling" xml:space="preserve">
+  <data name="Help_Lines_EnableLineNumberToggling" xml:space="preserve">
     <value>Enable line number toggling</value>
   </data>
-	<data name="Label_WrapLinesByDefault" xml:space="preserve">
+  <data name="Label_WrapLinesByDefault" xml:space="preserve">
     <value>Wrap lines by default</value>
   </data>
-	<data name="Help_Lines_WrapLinesByDefault" xml:space="preserve">
+  <data name="Help_Lines_WrapLinesByDefault" xml:space="preserve">
     <value>Wrap lines by default</value>
   </data>
-	<data name="Label_EnableLineWrapToggling" xml:space="preserve">
+  <data name="Label_EnableLineWrapToggling" xml:space="preserve">
     <value>Enable line wrap toggling</value>
   </data>
-	<data name="Help_Lines_EnableLineWrapToggling" xml:space="preserve">
+  <data name="Help_Lines_EnableLineWrapToggling" xml:space="preserve">
     <value>Enable line wrap toggling</value>
   </data>
-	<data name="Label_StartingLineNumber" xml:space="preserve">
+  <data name="Label_StartingLineNumber" xml:space="preserve">
     <value>Starting line number</value>
   </data>
-	<data name="Help_Lines_StartingLineNumber" xml:space="preserve">
+  <data name="Help_Lines_StartingLineNumber" xml:space="preserve">
     <value>Starting line number</value>
   </data>
-	<data name="Label_EnablePlainCodeView" xml:space="preserve">
+  <data name="Label_EnablePlainCodeView" xml:space="preserve">
     <value>Enable plain code view</value>
   </data>
-	<data name="Help_Code_EnablePlainCodeView" xml:space="preserve">
+  <data name="Help_Code_EnablePlainCodeView" xml:space="preserve">
     <value>Enable plain code view</value>
   </data>
-	<data name="Label_PlainCodeViewDisplayTrigger" xml:space="preserve">
+  <data name="Label_PlainCodeViewDisplayTrigger" xml:space="preserve">
     <value>Plain code view display trigger</value>
   </data>
-	<data name="Help_Code_PlainCodeViewDisplayTrigger" xml:space="preserve">
+  <data name="Help_Code_PlainCodeViewDisplayTrigger" xml:space="preserve">
     <value>Plain code view display trigger</value>
   </data>
-	<data name="Label_EnablePlainCodeToggling" xml:space="preserve">
+  <data name="Label_EnablePlainCodeToggling" xml:space="preserve">
     <value>Enable plain code toggling</value>
   </data>
-	<data name="Help_Code_EnablePlainCodeToggling" xml:space="preserve">
+  <data name="Help_Code_EnablePlainCodeToggling" xml:space="preserve">
     <value>Enable plain code toggling</value>
   </data>
-	<data name="Label_ShowPlainCodeByDefault" xml:space="preserve">
+  <data name="Label_ShowPlainCodeByDefault" xml:space="preserve">
     <value>Show plain code by default</value>
   </data>
-	<data name="Help_Code_ShowPlainCodeByDefault" xml:space="preserve">
+  <data name="Help_Code_ShowPlainCodeByDefault" xml:space="preserve">
     <value>Show plain code by default</value>
   </data>
-	<data name="Label_EnableCopyPaste" xml:space="preserve">
+  <data name="Label_EnableCopyPaste" xml:space="preserve">
     <value>Enable copy paste</value>
   </data>
-	<data name="Help_Code_EnableCopyPaste" xml:space="preserve">
+  <data name="Help_Code_EnableCopyPaste" xml:space="preserve">
     <value>Enable copy paste</value>
   </data>
-	<data name="Label_EnableOpenInNewWindow" xml:space="preserve">
+  <data name="Label_EnableOpenInNewWindow" xml:space="preserve">
     <value>Enable open in new window</value>
   </data>
-	<data name="Help_Code_EnableOpenInNewWindow" xml:space="preserve">
+  <data name="Help_Code_EnableOpenInNewWindow" xml:space="preserve">
     <value>Enable open in new window</value>
   </data>
-	<data name="Label_AlwaysDisplayScrollbars" xml:space="preserve">
+  <data name="Label_AlwaysDisplayScrollbars" xml:space="preserve">
     <value>Always display scrollbars</value>
   </data>
-	<data name="Help_Code_AlwaysDisplayScrollbars" xml:space="preserve">
+  <data name="Help_Code_AlwaysDisplayScrollbars" xml:space="preserve">
     <value>Always display scrollbars</value>
   </data>
-	<data name="Label_MinimizeCode" xml:space="preserve">
+  <data name="Label_MinimizeCode" xml:space="preserve">
     <value>Minimize code</value>
   </data>
-	<data name="Help_Code_MinimizeCode" xml:space="preserve">
+  <data name="Help_Code_MinimizeCode" xml:space="preserve">
     <value>Minimize code</value>
   </data>
-	<data name="Label_ExpandCodeBeyondPageBorderOnMouseHover" xml:space="preserve">
+  <data name="Label_ExpandCodeBeyondPageBorderOnMouseHover" xml:space="preserve">
     <value>Expand code beyond page border on mouse hover</value>
   </data>
-	<data name="Help_Code_ExpandCodeBeyondPageBorderOnMouseHover" xml:space="preserve">
+  <data name="Help_Code_ExpandCodeBeyondPageBorderOnMouseHover" xml:space="preserve">
     <value>Expand code beyond page border on mouse hover</value>
   </data>
-	<data name="Label_EnableCodeExpandingToggling" xml:space="preserve">
+  <data name="Label_EnableCodeExpandingToggling" xml:space="preserve">
     <value>Enable code expanding toggling</value>
   </data>
-	<data name="Help_Code_EnableCodeExpandingToggling" xml:space="preserve">
+  <data name="Help_Code_EnableCodeExpandingToggling" xml:space="preserve">
     <value>Enable code expanding toggling</value>
   </data>
-	<data name="Label_DecodeHtmlEntitiesInAttributes" xml:space="preserve">
+  <data name="Label_DecodeHtmlEntitiesInAttributes" xml:space="preserve">
     <value>Decode html entities in attributes</value>
   </data>
-	<data name="Help_Code_DecodeHtmlEntitiesInAttributes" xml:space="preserve">
+  <data name="Help_Code_DecodeHtmlEntitiesInAttributes" xml:space="preserve">
     <value>Decode html entities in attributes</value>
   </data>
-	<data name="Label_RemoveWhitespacesSurroundingShortcodeContent" xml:space="preserve">
+  <data name="Label_RemoveWhitespacesSurroundingShortcodeContent" xml:space="preserve">
     <value>Remove whitespaces surrounding shortcode content</value>
   </data>
-	<data name="Help_Code_RemoveWhitespacesSurroundingShortcodeContent" xml:space="preserve">
+  <data name="Help_Code_RemoveWhitespacesSurroundingShortcodeContent" xml:space="preserve">
     <value>Remove whitespaces surrounding shortcode content</value>
   </data>
-	<data name="Label_RemoveCodeTagsSurroundingShortcodeContent" xml:space="preserve">
+  <data name="Label_RemoveCodeTagsSurroundingShortcodeContent" xml:space="preserve">
     <value>Remove code tags surrounding shortcode content</value>
   </data>
-	<data name="Help_Code_RemoveCodeTagsSurroundingShortcodeContent" xml:space="preserve">
+  <data name="Help_Code_RemoveCodeTagsSurroundingShortcodeContent" xml:space="preserve">
     <value>Remove code tags surrounding shortcode content</value>
   </data>
-	<data name="Label_AllowMixedLanguageHighlightingWithDelimitersAndTags" xml:space="preserve">
+  <data name="Label_AllowMixedLanguageHighlightingWithDelimitersAndTags" xml:space="preserve">
     <value>Allow mixed language highlighting with delimiters and tags</value>
   </data>
-	<data name="Help_Code_AllowMixedLanguageHighlightingWithDelimitersAndTags" xml:space="preserve">
+  <data name="Help_Code_AllowMixedLanguageHighlightingWithDelimitersAndTags" xml:space="preserve">
     <value>Allow mixed language highlighting with delimiters and tags</value>
   </data>
-	<data name="Label_ShowMixedLanguageIcon" xml:space="preserve">
+  <data name="Label_ShowMixedLanguageIcon" xml:space="preserve">
     <value>Show mixed language icon</value>
   </data>
-	<data name="Help_Code_ShowMixedLanguageIcon" xml:space="preserve">
+  <data name="Help_Code_ShowMixedLanguageIcon" xml:space="preserve">
     <value>Show mixed language icon</value>
   </data>
-	<data name="Label_TabSizeInSpaces" xml:space="preserve">
+  <data name="Label_TabSizeInSpaces" xml:space="preserve">
     <value>Tab size in spaces</value>
   </data>
-	<data name="Help_Code_TabSizeInSpaces" xml:space="preserve">
+  <data name="Help_Code_TabSizeInSpaces" xml:space="preserve">
     <value>Tab size in spaces</value>
   </data>
-	<data name="Label_BlankLinesBeforeCode" xml:space="preserve">
+  <data name="Label_BlankLinesBeforeCode" xml:space="preserve">
     <value>Blank lines before code</value>
   </data>
-	<data name="Help_Code_BlankLinesBeforeCode" xml:space="preserve">
+  <data name="Help_Code_BlankLinesBeforeCode" xml:space="preserve">
     <value>Blank lines before code</value>
   </data>
-	<data name="Label_BlankLinesAfterCode" xml:space="preserve">
+  <data name="Label_BlankLinesAfterCode" xml:space="preserve">
     <value>Blank lines after code</value>
   </data>
-	<data name="Help_Code_BlankLinesAfterCode" xml:space="preserve">
+  <data name="Help_Code_BlankLinesAfterCode" xml:space="preserve">
     <value>Blank lines after code</value>
   </data>
-	<data name="Help_Content_Title" xml:space="preserve">
+  <data name="Help_Content_Title" xml:space="preserve">
     <value>Title</value>
   </data>
-	<data name="Help_Content_Inline" xml:space="preserve">
+  <data name="Help_Content_Inline" xml:space="preserve">
     <value>Inline</value>
   </data>
-	<data name="Help_Content_DontHighlight" xml:space="preserve">
+  <data name="Help_Content_DontHighlight" xml:space="preserve">
     <value>Dont highlight</value>
   </data>
-	<data name="Help_Content_Language" xml:space="preserve">
+  <data name="Help_Content_Language" xml:space="preserve">
     <value>Language</value>
   </data>
-	<data name="Help_Content_LineRange" xml:space="preserve">
+  <data name="Help_Content_LineRange" xml:space="preserve">
     <value>Line range</value>
   </data>
-	<data name="Help_Content_MarkedLines" xml:space="preserve">
+  <data name="Help_Content_MarkedLines" xml:space="preserve">
     <value>Marked lines</value>
   </data>
-	<data name="Label_Content" xml:space="preserve">
+  <data name="Label_Content" xml:space="preserve">
     <value>Content</value>
   </data>
-	<data name="Help_Content_Content" xml:space="preserve">
+  <data name="Help_Content_Content" xml:space="preserve">
     <value>Content</value>
   </data>
-	<data name="Help_Content_Url" xml:space="preserve">
+  <data name="Help_Content_Url" xml:space="preserve">
     <value>Url</value>
+  </data>
+  <data name="Title_DownloadUpdateForm" xml:space="preserve">
+    <value>Downloading update...</value>
+  </data>
+  <data name="Text_DownloadProgressMessageFormat_Version" xml:space="preserve">
+    <value>Downloading version {0}...</value>
+  </data>
+  <data name="Label_Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="Text_DownloadUpdateCancelConfirmation" xml:space="preserve">
+    <value>Do you really want to cancel this download operation?</value>
+  </data>
+  <data name="Text_ProgressMessage_Received_ToReceive" xml:space="preserve">
+    <value>Received {0} bytes out of {1} to be received...</value>
+  </data>
+  <data name="Label_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Label_CheckForUpdates" xml:space="preserve">
+    <value>Check for updates during startup</value>
+  </data>
+  <data name="Label_IncludePreReleaseVersions" xml:space="preserve">
+    <value>Include pre-release versions</value>
+  </data>
+  <data name="Label_LastCheckedAt" xml:space="preserve">
+    <value>Last checked at</value>
+  </data>
+  <data name="Label_PlugIn" xml:space="preserve">
+    <value>Plug-in</value>
+  </data>
+  <data name="Label_UpdateManagement" xml:space="preserve">
+    <value>Update management</value>
+  </data>
+  <data name="Error_UpdateCheckFailure" xml:space="preserve">
+    <value>Failed to retrieve the latest release details from the server</value>
+  </data>
+  <data name="Error_DownloadError_Error" xml:space="preserve">
+    <value>An unknown error has occurred while downloading the requested resource - '{0}'</value>
+  </data>
+  <data name="Label_CheckNow" xml:space="preserve">
+    <value>Check now...</value>
+  </data>
+  <data name="Label_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Label_Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Text_InstalledVersionUpToDate_Version" xml:space="preserve">
+    <value>The installed version '{0}' is up to date</value>
+  </data>
+  <data name="Text_LatestVersionAvailableDownloadPrompt_Version" xml:space="preserve">
+    <value>A newer version '{0}' is available on the server. Would you like to download and installl this version?</value>
+  </data>
+  <data name="Label_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Text_DownloadProgressCompletedMessageFormat_Version" xml:space="preserve">
+    <value>Version '{0}' downloaded</value>
   </data>
 </root>

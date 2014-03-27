@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
@@ -16,6 +17,8 @@ namespace DC.Crayon.Wlw
 	/// </summary>
 	internal static class Utils
 	{
+		public static readonly CookieContainer CookieContainer = new CookieContainer();
+		public const string UserAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36";
 		private delegate bool CheckSplittableDelegate(int i);
 
 		public static string NameToDisplayName(string name, string wordSeparator = null, bool convertToTitleCase = false, IEnumerable<string> nonSplittableTokens = null)

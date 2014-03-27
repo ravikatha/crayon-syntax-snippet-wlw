@@ -61,6 +61,15 @@ namespace DC.Crayon.Wlw.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An unknown error has occurred while downloading the requested resource - &apos;{0}&apos;.
+        /// </summary>
+        internal static string Error_DownloadError_Error {
+            get {
+                return ResourceManager.GetString("Error_DownloadError_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This field is required.
         /// </summary>
         internal static string Error_FieldRequired {
@@ -75,6 +84,15 @@ namespace DC.Crayon.Wlw.Properties {
         internal static string Error_InvalidLineNumberRange {
             get {
                 return ResourceManager.GetString("Error_InvalidLineNumberRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to retrieve the latest release details from the server.
+        /// </summary>
+        internal static string Error_UpdateCheckFailure {
+            get {
+                return ResourceManager.GetString("Error_UpdateCheckFailure", resourceCulture);
             }
         }
         
@@ -674,6 +692,15 @@ namespace DC.Crayon.Wlw.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        internal static string Label_About {
+            get {
+                return ResourceManager.GetString("Label_About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Allow floating elements to surround crayon.
         /// </summary>
         internal static string Label_AllowFloatingElementsToSurroundCrayon {
@@ -733,6 +760,33 @@ namespace DC.Crayon.Wlw.Properties {
         internal static string Label_Cancel {
             get {
                 return ResourceManager.GetString("Label_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check for updates during startup.
+        /// </summary>
+        internal static string Label_CheckForUpdates {
+            get {
+                return ResourceManager.GetString("Label_CheckForUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check now....
+        /// </summary>
+        internal static string Label_CheckNow {
+            get {
+                return ResourceManager.GetString("Label_CheckNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        internal static string Label_Close {
+            get {
+                return ResourceManager.GetString("Label_Close", resourceCulture);
             }
         }
         
@@ -881,6 +935,15 @@ namespace DC.Crayon.Wlw.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        internal static string Label_Error {
+            get {
+                return ResourceManager.GetString("Label_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Expand code beyond page border on mouse hover.
         /// </summary>
         internal static string Label_ExpandCodeBeyondPageBorderOnMouseHover {
@@ -926,6 +989,24 @@ namespace DC.Crayon.Wlw.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Include pre-release versions.
+        /// </summary>
+        internal static string Label_IncludePreReleaseVersions {
+            get {
+                return ResourceManager.GetString("Label_IncludePreReleaseVersions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        internal static string Label_Information {
+            get {
+                return ResourceManager.GetString("Label_Information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inline.
         /// </summary>
         internal static string Label_Inline {
@@ -967,6 +1048,15 @@ namespace DC.Crayon.Wlw.Properties {
         internal static string Label_Languages {
             get {
                 return ResourceManager.GetString("Label_Languages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last checked at.
+        /// </summary>
+        internal static string Label_LastCheckedAt {
+            get {
+                return ResourceManager.GetString("Label_LastCheckedAt", resourceCulture);
             }
         }
         
@@ -1048,6 +1138,15 @@ namespace DC.Crayon.Wlw.Properties {
         internal static string Label_PlainCodeViewDisplayTrigger {
             get {
                 return ResourceManager.GetString("Label_PlainCodeViewDisplayTrigger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plug-in.
+        /// </summary>
+        internal static string Label_PlugIn {
+            get {
+                return ResourceManager.GetString("Label_PlugIn", resourceCulture);
             }
         }
         
@@ -1196,6 +1295,15 @@ namespace DC.Crayon.Wlw.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update management.
+        /// </summary>
+        internal static string Label_UpdateManagement {
+            get {
+                return ResourceManager.GetString("Label_UpdateManagement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Url.
         /// </summary>
         internal static string Label_Url {
@@ -1214,6 +1322,15 @@ namespace DC.Crayon.Wlw.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        internal static string Label_Warning {
+            get {
+                return ResourceManager.GetString("Label_Warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Width.
         /// </summary>
         internal static string Label_Width {
@@ -1228,6 +1345,69 @@ namespace DC.Crayon.Wlw.Properties {
         internal static string Label_WrapLinesByDefault {
             get {
                 return ResourceManager.GetString("Label_WrapLinesByDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version &apos;{0}&apos; downloaded.
+        /// </summary>
+        internal static string Text_DownloadProgressCompletedMessageFormat_Version {
+            get {
+                return ResourceManager.GetString("Text_DownloadProgressCompletedMessageFormat_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading version {0}....
+        /// </summary>
+        internal static string Text_DownloadProgressMessageFormat_Version {
+            get {
+                return ResourceManager.GetString("Text_DownloadProgressMessageFormat_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you really want to cancel this download operation?.
+        /// </summary>
+        internal static string Text_DownloadUpdateCancelConfirmation {
+            get {
+                return ResourceManager.GetString("Text_DownloadUpdateCancelConfirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The installed version &apos;{0}&apos; is up to date.
+        /// </summary>
+        internal static string Text_InstalledVersionUpToDate_Version {
+            get {
+                return ResourceManager.GetString("Text_InstalledVersionUpToDate_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A newer version &apos;{0}&apos; is available on the server. Would you like to download and installl this version?.
+        /// </summary>
+        internal static string Text_LatestVersionAvailableDownloadPrompt_Version {
+            get {
+                return ResourceManager.GetString("Text_LatestVersionAvailableDownloadPrompt_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Received {0} bytes out of {1} to be received....
+        /// </summary>
+        internal static string Text_ProgressMessage_Received_ToReceive {
+            get {
+                return ResourceManager.GetString("Text_ProgressMessage_Received_ToReceive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading update....
+        /// </summary>
+        internal static string Title_DownloadUpdateForm {
+            get {
+                return ResourceManager.GetString("Title_DownloadUpdateForm", resourceCulture);
             }
         }
         

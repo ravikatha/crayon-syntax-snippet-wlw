@@ -4,6 +4,8 @@
 <?define ProductName = "Crayon Code Snippet Plugin for Windows Live Writer" ?>
 <?define SetupTitle = "Crayon Code Plugin for Live Writer - DotCastle - " ?>
 <?define ProductVersion = "1.0.0" ?>
+<?define ProductVersionPreReleaseFlag = "0" ?>
+<?define UpgradeCode = "2C651C0E-991A-4529-B18E-E287EEF72693" ?>
 <?define ProductDescription = "Crayon Code Snippet Plug-in for Windows Live Writer from DotCastle" ?>
 <?define ProductKeywords = "Crayon, Syntax Highlighter, Windows Live Writer, Live Writer, DotCastle" ?>
 <?define DocumentationUrl = "http://www.dotcastle.com/blog/default/tools-plug-ins/crayon-syntax-highlighter-plugin-for-windows-live-writer" ?>
@@ -15,19 +17,32 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
 	 xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
 	 xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
-	<Product Id="AD96F4F7-4351-4685-A1EB-845E92AFAC88"
+	<Product Id="*"
 			 Name="$(var.SetupTitle)" Version="$(var.ProductVersion)"
 			 Language="1033" Codepage="1252" Manufacturer="$(var.ManufacturerName)"
-			 UpgradeCode="2C651C0E-991A-4529-B18E-E287EEF72693">
+			 UpgradeCode="$(var.UpgradeCode)">
 		<!-- Package & Upgrade Info -->
 		<Package Id="*" Keywords="$(var.ProductKeywords)"
 				 Description="$(var.ProductDescription)"
 				 Manufacturer="$(var.ManufacturerName)"
 				 Comments="$(var.PackageComments)"
 				 InstallerVersion="400" Compressed="yes" InstallScope="perMachine" SummaryCodepage="1252" />
-		<MajorUpgrade AllowDowngrades="no" AllowSameVersionUpgrades="no" IgnoreRemoveFailure="yes"
+		
+		<MajorUpgrade AllowDowngrades="no" AllowSameVersionUpgrades="yes" IgnoreRemoveFailure="yes"
 					  DowngradeErrorMessage="A newer version of $(var.ProductName) is already installed." />
-
+		
+		<Upgrade Id="$(var.UpgradeCode)">
+			<!-- Detect any newer version of this product -->
+			<UpgradeVersion Minimum="$(var.ProductVersion)"
+							IncludeMinimum="no" OnlyDetect="yes"
+							Language="1033" Property="NEWVERSIONFOUND" />
+			
+			<!-- Detect and remove any older version of this product -->
+			<UpgradeVersion Maximum="$(var.ProductVersion)"
+							IncludeMaximum="yes" OnlyDetect="no"
+							Language="1033" Property="OLDVERSIONFOUND"/>
+		</Upgrade>
+		
 		<!-- License -->
 		<WixVariable Id="WixUILicenseRtf" Value="$(var.DC.Crayon.Wlw.TargetDir)\License.rtf" />
 		
@@ -78,10 +93,15 @@
 					<Directory Id="PRODUCTDIR" Name="$(var.ProductName)">
 						<Component Id="ProductComponent" DiskId="1" Guid="9949819B-64BC-4A7B-818D-E2484EC49862">
 							<File Id="ProgramBinary" Source="$(var.DC.Crayon.Wlw.TargetPath)" KeyPath="yes">
-								<netfx:NativeImage Id="ngen_MainBinary" Platform="32bit" Priority="0" AppBaseDirectory="TARGETDIR" />
+								<netfx:NativeImage Id="ngen_MainBinary" Platform="32bit" Priority="0" AppBaseDirectory="PRODUCTDIR" />
+							</File>
+							<File Id="NewtonsoftJson" Source="$(var.DC.Crayon.Wlw.TargetDir)\Newtonsoft.Json.dll">
+								<netfx:NativeImage Id="ngen_NewtonsoftJson" Platform="32bit" Priority="0" AppBaseDirectory="PRODUCTDIR" />
 							</File>
 							<File Id="License" Source="$(var.DC.Crayon.Wlw.TargetDir)\License.rtf" />
 							<RegistryValue Root="HKLM" Key="Software\Microsoft\Windows Live\Writer\PluginAssemblies" Name="$(var.PluginRegistryName)" Type="string" Value="[PRODUCTDIR]$(var.DC.Crayon.Wlw.TargetFileName)" />
+							<RegistryValue Root="HKLM" Key="Software\$(var.Company)\$(var.PluginRegistryName)" Name="Version" Type="string" Value="$(var.ProductVersion)" />
+							<RegistryValue Root="HKLM" Key="Software\$(var.Company)\$(var.PluginRegistryName)" Name="PreRelease" Type="integer" Value="$(var.ProductVersionPreReleaseFlag)" />
 							<RemoveFolder Id="RemoveProductDir" Directory="PRODUCTDIR" On="uninstall" />
 							<RemoveFolder Id="RemoveCompanyDir" Directory="COMPANYDIR" On="uninstall" />
 						</Component>

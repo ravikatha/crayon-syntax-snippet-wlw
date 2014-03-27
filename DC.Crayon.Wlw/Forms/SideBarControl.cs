@@ -19,13 +19,26 @@ namespace DC.Crayon.Wlw.Forms
 		private IProperties _options;
 		private bool _controlsInitialized;
 
+		#region Initialization
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="editorSite"></param>
+		/// <param name="options"></param>
 		public SideBarControl(ISmartContentEditorSite editorSite, IProperties options)
 		{
 			_options = options;
 			_editorSite = editorSite;
-
 			InitializeComponent();
+		}
 
+		/// <summary>
+		/// Initialization
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void OnLoad(object sender, EventArgs e)
+		{
 			// Update values
 			if (SelectedContent != null)
 			{
@@ -38,12 +51,18 @@ namespace DC.Crayon.Wlw.Forms
 
 			// Inline & Url controls
 			urlTextBox.Enabled = !inlineCheckBox.Checked;
-			inlineCheckBox.CheckedChanged += (s, e) =>
+			inlineCheckBox.CheckedChanged += (s, pe) =>
 			{
 				urlTextBox.Enabled = !inlineCheckBox.Checked;
 			};
 		}
+		#endregion
 
+		#region Set & Get Data
+		/// <summary>
+		/// Sets the content from properties dictionary to the controls
+		/// </summary>
+		/// <param name="properties"></param>
 		private void SetContentToControls(IProperties properties)
 		{
 			bool initializeControls = !_controlsInitialized;
@@ -91,6 +110,9 @@ namespace DC.Crayon.Wlw.Forms
 			});
 		}
 
+		/// <summary>
+		/// Gets the content from controls and applies to the properties dictionary
+		/// </summary>
 		private void GetContentFromControls()
 		{
 			var contentControls = new Dictionary<string, Control>
@@ -113,14 +135,23 @@ namespace DC.Crayon.Wlw.Forms
 			// Fire event
 			OnContentEdited();
 		}
+		#endregion
 
 		#region Handlers
+		/// <summary>
+		/// Selected content changed handler
+		/// </summary>
 		protected override void OnSelectedContentChanged()
 		{
 			SetContentToControls(SelectedContent.Properties);
 			base.OnSelectedContentChanged();
 		}
 
+		/// <summary>
+		/// Handler for Update button click
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void OnUpdate(object sender, EventArgs e)
 		{
 			if (ValidateChildren())
@@ -129,11 +160,21 @@ namespace DC.Crayon.Wlw.Forms
 			}
 		}
 
+		/// <summary>
+		/// Handler for Reset button click
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void OnReset(object sender, EventArgs e)
 		{
 			SetContentToControls(null);
 		}
 
+		/// <summary>
+		/// Handler for settings button click
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void OnOverrides(object sender, EventArgs e)
 		{
 			if (SelectedContent != null)

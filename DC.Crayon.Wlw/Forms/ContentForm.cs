@@ -24,7 +24,10 @@ namespace DC.Crayon.Wlw.Forms
 			_contentProperties = contentProperties;
 			_properties = properties;
 			InitializeComponent();
+		}
 
+		private void OnLoad(object sender, EventArgs e)
+		{
 			// Localize
 			Text = new ResourceManager(typeof(CrayonSnippetPlugin)).GetString("WriterPlugin.Name") ?? Text;
 			okButton.Text = Resources.Label_OK;
@@ -41,7 +44,7 @@ namespace DC.Crayon.Wlw.Forms
 			TextBox urlTextBox = settingsTable.Controls.OfType<TextBox>()
 				.SingleOrDefault(c => c.Tag == Options.ContentOnlyOptions.Single(o => string.Equals(o.Name, "Url", StringComparison.Ordinal)));
 			urlTextBox.Enabled = !inlineCheckbox.Checked;
-			inlineCheckbox.CheckedChanged += (s, e) =>
+			inlineCheckbox.CheckedChanged += (s, pe) =>
 			{
 				urlTextBox.Enabled = !inlineCheckbox.Checked;
 			};

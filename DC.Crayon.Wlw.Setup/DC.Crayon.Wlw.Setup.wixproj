@@ -25,8 +25,7 @@
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <SuppressPdbOutput>True</SuppressPdbOutput>
     <LeaveTemporaryFiles>False</LeaveTemporaryFiles>
-    <SuppressIces>
-    </SuppressIces>
+    <SuppressIces>ICE61</SuppressIces>
     <SuppressValidation>False</SuppressValidation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -38,8 +37,7 @@
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <SuppressPdbOutput>True</SuppressPdbOutput>
     <LeaveTemporaryFiles>False</LeaveTemporaryFiles>
-    <SuppressIces>
-    </SuppressIces>
+    <SuppressIces>ICE61</SuppressIces>
     <SuppressValidation>False</SuppressValidation>
   </PropertyGroup>
   <ItemGroup>

@@ -36,6 +36,10 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\NuGet\Newtonsoft.Json.6.0.1\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -51,6 +55,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\DownloadUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DownloadUpdateForm.Designer.cs">
+      <DependentUpon>DownloadUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormHelper.cs" />
     <Compile Include="Forms\ContentForm.cs">
       <SubType>Form</SubType>
@@ -69,6 +79,9 @@
     <Compile Include="Framework\WidthOrHeightOption.cs" />
     <Compile Include="Framework\LanguageOption.cs" />
     <Compile Include="Types\CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Types\DownloadWebClient.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Types\HtmlElement.cs" />
@@ -103,6 +116,8 @@
     <Compile Include="Types\LanguageDisplay.cs" />
     <Compile Include="Types\PlainCodeViewDisplayMouseTrigger.cs" />
     <Compile Include="Types\ToolbarDisplay.cs" />
+    <Compile Include="Updates\Updater.cs" />
+    <Compile Include="Updates\VersionInfo.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ContentForm.resx">
       <DependentUpon>ContentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DownloadUpdateForm.resx">
+      <DependentUpon>DownloadUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OptionsForm.resx">
       <DependentUpon>OptionsForm.cs</DependentUpon>
@@ -131,6 +149,9 @@
     <Content Include="License.rtf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

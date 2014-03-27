@@ -123,6 +123,7 @@
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Crayon Code Snippet from DotCastle";
+			this.Load += new System.EventHandler(this.OnLoad);
 			this.panel.ResumeLayout(false);
 			this.panel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();

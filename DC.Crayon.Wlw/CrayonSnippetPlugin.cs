@@ -25,6 +25,25 @@ namespace DC.Crayon.Wlw
 		private static readonly Regex _whiteSpaceRegex = new Regex(@"\s+", RegexOptions.Compiled | RegexOptions.Singleline);
 		private const string _elementIdProperty = "Editor_ElementId";
 
+		#region Initialization
+		/// <summary>
+		/// Initialization override for update management
+		/// </summary>
+		/// <param name="pluginOptions"></param>
+		public override void Initialize(IProperties pluginOptions)
+		{
+			// Base
+			base.Initialize(pluginOptions);
+
+			// Initiate update management
+			bool checkAtStartup = pluginOptions.GetBoolean(Updater.CheckUpdatesOnStartupOptionName, true);
+			if (checkAtStartup)
+			{
+				Updater.Check(pluginOptions);
+			}
+		}
+		#endregion
+
 		#region Support Methods
 		public override void EditOptions(IWin32Window dialogOwner)
 		{
