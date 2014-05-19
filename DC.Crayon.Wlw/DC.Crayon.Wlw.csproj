@@ -76,6 +76,7 @@
     <Compile Include="Framework\MultilineTextOption.cs" />
     <Compile Include="Framework\LineRangeOption.cs" />
     <Compile Include="Framework\FontSizeOption.cs" />
+    <Compile Include="Framework\StandardOptions.cs" />
     <Compile Include="Framework\WidthOrHeightOption.cs" />
     <Compile Include="Framework\LanguageOption.cs" />
     <Compile Include="Types\CustomTextBox.cs">
@@ -151,12 +152,28 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Framework\StandardOptions.bin" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>@echo off
+IF "$(ConfigurationName)" == "Release" GOTO Rel
+IF "$(ConfigurationName)" == "Debug" GOTO Dbg
+GOTO End
+
+:Dbg
+XCOPY /D /Y /R "$(TargetDir)*.dll" "C:\Program Files (x86)\Windows Live\Writer\Plugins\"
+XCOPY /D /Y /R "$(TargetDir)*.pdb" "C:\Program Files (x86)\Windows Live\Writer\Plugins\"
+GOTO End
+
+:Rel
+"$(SolutionDir)..\..\Resources\Tools\DeleteFolder.exe" "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)"
+md "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)"
+xcopy "$(ProjectDir)*.*" "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)" /E /Q /H /R /Y
+GOTO End
+
+:End</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
