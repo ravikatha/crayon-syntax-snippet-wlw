@@ -196,6 +196,10 @@ namespace DC.Crayon.Wlw.Forms
 				_versionInfo.Version);
 			cancelButton.Text = Resources.Label_Close;
 			cancelButton.DialogResult = DialogResult.OK;
+
+			// Close this dialog
+			DialogResult = DialogResult.OK;
+			Close();
 		}
 
 		/// <summary>
