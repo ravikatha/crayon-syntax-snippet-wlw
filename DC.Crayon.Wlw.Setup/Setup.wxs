@@ -3,7 +3,7 @@
 <!-- Global Defines -->
 <?define ProductName = "Crayon Code Snippet Plugin for Windows Live Writer" ?>
 <?define SetupTitle = "Crayon Code Plugin for Live Writer - DotCastle - " ?>
-<?define ProductVersion = "1.0.0" ?>
+<?define ProductVersion = "1.0.1" ?>
 <?define ProductVersionPreReleaseFlag = "0" ?>
 <?define UpgradeCode = "2C651C0E-991A-4529-B18E-E287EEF72693" ?>
 <?define ProductDescription = "Crayon Code Snippet Plug-in for Windows Live Writer from DotCastle" ?>
