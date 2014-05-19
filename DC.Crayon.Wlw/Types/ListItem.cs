@@ -9,7 +9,12 @@ namespace DC.Crayon.Wlw
 	public class ListItem
 	{
 		#region Construction
-		public ListItem(string value = null, string text = null)
+		public ListItem()
+			: this (null, null)
+		{
+		}
+
+		public ListItem(string value, string text = null)
 		{
 			Value = value;
 			Text = text;

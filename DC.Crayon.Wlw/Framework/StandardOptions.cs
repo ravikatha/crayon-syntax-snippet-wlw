@@ -7,6 +7,8 @@ using System.Resources;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Windows.Forms.VisualStyles;
+using System.Xml;
 
 namespace DC.Crayon.Wlw.Framework
 {
@@ -21,80 +23,32 @@ namespace DC.Crayon.Wlw.Framework
 		/// Reads the options object from the resource file
 		/// </summary>
 		/// <returns>Standard Options</returns>
-		public static StandardOptions GetFromResource()
+		internal static StandardOptions GetFromResource()
 		{
 			Assembly resourceAssembly = Assembly.GetExecutingAssembly();
-			const string resourceName = "DC.Crayon.Wlw.Framework.StandardOptions.bin";
-			byte[] data = null;
+			const string resourceName = "DC.Crayon.Wlw.Framework.StandardOptions.xml";
 
 			// Read All Bytes from the resource
 			using (var resourceStream = resourceAssembly.GetManifestResourceStream(resourceName))
 			{
 				if (resourceStream != null)
 				{
-					const int bufferLength = 65536;
-					var dataBuffer = new byte[bufferLength];
-					using (var memStream = new MemoryStream())
+					using (var resourceReader = new StreamReader(resourceStream, Encoding.UTF8, true))
 					{
-						while (true)
-						{
-							var readBytes = resourceStream.Read(dataBuffer, 0, bufferLength);
-							if (readBytes == 0)
-							{
-								break;
-							}
-							memStream.Write(dataBuffer, 0, readBytes);
-						}
-						data = memStream.ToArray();
+						return resourceReader.ReadToEnd().XmlDeserialize() as StandardOptions;
 					}
 				}
 			}
-
-			// Deserialize
-			return BinaryDeserialize(data);
+			return null;
 		}
 
 		/// <summary>
-		/// Serializes the specified object using a binary serializer
+		/// Converts this instance to XML
 		/// </summary>
-		/// <param name="surrogateSelector">Surrogate selector</param>
-		/// <returns>Byte array</returns>
-		public byte[] BinarySerialize(ISurrogateSelector surrogateSelector = null)
+		/// <returns></returns>
+		public string ConvertToXml()
 		{
-			var binFmtr = new BinaryFormatter();
-			if (surrogateSelector != null)
-			{
-				binFmtr.SurrogateSelector = surrogateSelector;
-			}
-			using (var memStream = new MemoryStream())
-			{
-				binFmtr.Serialize(memStream, this);
-				return memStream.ToArray();
-			}
-		}
-
-		/// <summary>
-		/// Deserialize a byte buffer (serialized by BinarySerialize) to its corresponding instance
-		/// </summary>
-		/// <param name="sourceInstanceData"></param>
-		/// <param name="surrogateSelector">Surrogate selector</param>
-		/// <returns>Deserialized object</returns>
-		private static StandardOptions BinaryDeserialize(byte[] sourceInstanceData, ISurrogateSelector surrogateSelector = null)
-		{
-			if ((sourceInstanceData == null) || (sourceInstanceData.Length == 0))
-			{
-				return null;
-			}
-
-			var binFmtr = new BinaryFormatter();
-			if (surrogateSelector != null)
-			{
-				binFmtr.SurrogateSelector = surrogateSelector;
-			}
-			using (var memStream = new MemoryStream(sourceInstanceData))
-			{
-				return binFmtr.Deserialize(memStream) as StandardOptions;
-			}
+			return this.XmlSerialize(ConformanceLevel.Document, true);
 		}
 	}
 }

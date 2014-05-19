@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -9,6 +10,9 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Serialization;
 
 namespace DC.Crayon.Wlw
 {
@@ -106,6 +110,12 @@ namespace DC.Crayon.Wlw
 
 				if (isFirstChar)
 				{
+					// Convert to upper case if required
+					if (convertToTitleCase)
+					{
+						ch = Char.ToUpperInvariant(ch);
+					}
+
 					sbBuffer.Append(ch);
 					isFirstChar = false;
 				}
@@ -229,6 +239,141 @@ namespace DC.Crayon.Wlw
 			using (var memStream = new MemoryStream(sourceInstanceData))
 			{
 				return binFmtr.Deserialize(memStream);
+			}
+		}
+
+		private static readonly Regex _invalidXmlRegex = new Regex(@"[^\x09\x0A\x0D\x20-\xD7FF\xE000-\xFFFD\x10000-x10FFFF]", RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.IgnoreCase);
+		public static string SanitizeXml(this string xml)
+		{
+			if (xml == null)
+			{
+				return null;
+			}
+
+			// From xml spec valid chars:
+			// #x9 | #xA | #xD | [#x20-#xD7FF] | [#xE000-#xFFFD] | [#x10000-#x10FFFF]    
+			// any Unicode character, excluding the surrogate blocks, FFFE, and FFFF.
+			return _invalidXmlRegex.Replace(xml, string.Empty);
+		}
+
+		private static Dictionary<Type, XmlSerializer> _xmlSerializers = new Dictionary<Type, XmlSerializer>();
+		/// <summary>
+		/// Serializes an object instance to xml
+		/// </summary>
+		/// <param name="sourceInstance">Object to be serialized</param>
+		/// <param name="conformanceLevel">Xml document conformance</param>
+		/// <param name="ignoreAssemblyVersion">Ignore assembly version</param>
+		/// <returns>Xml document data</returns>
+		public static string XmlSerialize(this object sourceInstance, ConformanceLevel conformanceLevel = ConformanceLevel.Document, bool ignoreAssemblyVersion = false)
+		{
+			if (sourceInstance == null)
+			{
+				return null;
+			}
+
+			Type sourceType = sourceInstance.GetType();
+			XmlSerializer xmlSerializer;
+			lock (_xmlSerializers)
+			{
+				if (!_xmlSerializers.TryGetValue(sourceType, out xmlSerializer))
+				{
+					_xmlSerializers[sourceType] = xmlSerializer = new XmlSerializer(sourceType);
+				}
+			}
+
+			// Type Name
+			var typeName = sourceInstance.GetType().AssemblyQualifiedName;
+			if (ignoreAssemblyVersion)
+			{
+				int vIndex = typeName.IndexOf("Version=", StringComparison.OrdinalIgnoreCase);
+				if (vIndex < 0)
+				{
+					vIndex = typeName.IndexOf("Version =", StringComparison.OrdinalIgnoreCase);
+				}
+				if (vIndex >= 0)
+				{
+					typeName = typeName.Substring(0, vIndex).TrimEnd(' ', ',');
+				}
+			}
+
+			StringBuilder sbBuffer = new StringBuilder(typeName + Environment.NewLine);
+			conformanceLevel = (conformanceLevel == ConformanceLevel.Auto) ? ConformanceLevel.Document : conformanceLevel;
+			using (StringWriter strWriter = new StringWriter(sbBuffer, CultureInfo.CurrentCulture))
+			{
+				XmlWriterSettings xmlWriterSettings = new XmlWriterSettings
+				{
+					CheckCharacters = true,
+					ConformanceLevel = conformanceLevel,
+					CloseOutput = false,
+					Encoding = Encoding.UTF8,
+					Indent = true,
+					IndentChars = "\t",
+					NewLineChars = "\n",
+					NewLineHandling = NewLineHandling.Entitize,
+					NewLineOnAttributes = true,
+					OmitXmlDeclaration = (conformanceLevel == ConformanceLevel.Fragment)
+				};
+
+				using (XmlWriter xmlWriter = XmlWriter.Create(strWriter, xmlWriterSettings))
+				{
+					lock (xmlSerializer)
+					{
+						xmlSerializer.Serialize(xmlWriter, sourceInstance);
+					}
+				}
+			}
+
+			return sbBuffer.ToString();
+		}
+
+		/// <summary>
+		/// Deserializes xml data (serialized with XmlSerialize) to its corresponding object instance
+		/// </summary>
+		/// <param name="sourceXml">Source xml data</param>
+		/// <param name="conformanceLevel">Xml data conformance level</param>
+		/// <returns>Deserialized object instance</returns>
+		public static object XmlDeserialize(this string sourceXml, ConformanceLevel conformanceLevel = ConformanceLevel.Document)
+		{
+			sourceXml = (sourceXml ?? string.Empty).Trim();
+			if (sourceXml.Length == 0)
+			{
+				return null;
+			}
+
+			using (StringReader strReader = new StringReader(sourceXml))
+			{
+				string typeName = strReader.ReadLine();
+				Type instanceType = Type.GetType(typeName.Trim(), true, true);
+
+				XmlSerializer xmlSerializer;
+				lock (_xmlSerializers)
+				{
+					if (!_xmlSerializers.TryGetValue(instanceType, out xmlSerializer))
+					{
+						_xmlSerializers[instanceType] = xmlSerializer = new XmlSerializer(instanceType);
+					}
+				}
+
+				conformanceLevel = (conformanceLevel == ConformanceLevel.Auto) ? ConformanceLevel.Document : conformanceLevel;
+				XmlReaderSettings xmlReaderSettings = new XmlReaderSettings
+				{
+					CheckCharacters = true,
+					ConformanceLevel = conformanceLevel,
+					CloseInput = false,
+					IgnoreComments = false,
+					IgnoreProcessingInstructions = false,
+					IgnoreWhitespace = true,
+					ValidationFlags = XmlSchemaValidationFlags.None,
+					ValidationType = ValidationType.None
+				};
+
+				using (XmlReader xmlReader = XmlReader.Create(strReader, xmlReaderSettings))
+				{
+					lock (xmlSerializer)
+					{
+						return xmlSerializer.Deserialize(xmlReader);
+					}
+				}
 			}
 		}
 
