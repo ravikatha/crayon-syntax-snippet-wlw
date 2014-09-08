@@ -3,6 +3,18 @@
 <StandardOptions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<StandardThemeListItems>
 		<ListItem>
+			<Text>1c Kod</Text>
+			<Value>1c-kod</Value>
+		</ListItem>
+		<ListItem>
+			<Text>1c Zapros</Text>
+			<Value>1c-zapros</Value>
+		</ListItem>
+		<ListItem>
+			<Text>809finest</Text>
+			<Value>809finest</Value>
+		</ListItem>
+		<ListItem>
 			<Text>Ado</Text>
 			<Value>ado</Value>
 		</ListItem>
@@ -67,6 +79,10 @@
 			<Value>iris-vfx</Value>
 		</ListItem>
 		<ListItem>
+			<Text>Light Abite</Text>
+			<Value>light-abite</Value>
+		</ListItem>
+		<ListItem>
 			<Text>Mirc Dark</Text>
 			<Value>mirc-dark</Value>
 		</ListItem>
@@ -89,6 +105,10 @@
 		<ListItem>
 			<Text>Secrets Of Rock</Text>
 			<Value>secrets-of-rock</Value>
+		</ListItem>
+		<ListItem>
+			<Text>Shell Default</Text>
+			<Value>shell-default</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Solarized Dark</Text>
@@ -195,11 +215,23 @@
 	</StandardFontListItems>
 	<StandardLanguageListItems>
 		<ListItem>
+			<Text>1С (Запрос)</Text>
+			<Value>1c-zapros</Value>
+		</ListItem>
+		<ListItem>
+			<Text>1С (Код)</Text>
+			<Value>1c-kod</Value>
+		</ListItem>
+		<ListItem>
 			<Text>ABAP</Text>
 			<Value>abap</Value>
 		</ListItem>
 		<ListItem>
-			<Text>ada</Text>
+			<Text>ActionScript</Text>
+			<Value>as</Value>
+		</ListItem>
+		<ListItem>
+			<Text>ADA</Text>
 			<Value>ada</Value>
 		</ListItem>
 		<ListItem>
@@ -219,24 +251,16 @@
 			<Value>arduino</Value>
 		</ListItem>
 		<ListItem>
-			<Text>ActionScript</Text>
-			<Value>as</Value>
+			<Text>ASP</Text>
+			<Value>asp</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Assembly (x86)</Text>
 			<Value>asm</Value>
 		</ListItem>
 		<ListItem>
-			<Text>ASP</Text>
-			<Value>asp</Value>
-		</ListItem>
-		<ListItem>
 			<Text>AutoIt</Text>
 			<Value>autoit</Value>
-		</ListItem>
-		<ListItem>
-			<Text>MS DOS</Text>
-			<Value>batch</Value>
 		</ListItem>
 		<ListItem>
 			<Text>C</Text>
@@ -267,12 +291,12 @@
 			<Value>delphi</Value>
 		</ListItem>
 		<ListItem>
-			<Text>diff</Text>
-			<Value>diff</Value>
-		</ListItem>
-		<ListItem>
 			<Text>DelphiWebScript/DWS</Text>
 			<Value>dws</Value>
+		</ListItem>
+		<ListItem>
+			<Text>diff</Text>
+			<Value>diff</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Erlang</Text>
@@ -287,12 +311,12 @@
 			<Value>haskell</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Inventor iLogic</Text>
-			<Value>ilogic</Value>
-		</ListItem>
-		<ListItem>
 			<Text>INI</Text>
 			<Value>ini</Value>
+		</ListItem>
+		<ListItem>
+			<Text>Inventor iLogic</Text>
+			<Value>ilogic</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Java</Text>
@@ -319,6 +343,10 @@
 			<Value>matlab</Value>
 		</ListItem>
 		<ListItem>
+			<Text>Microsoft Registry</Text>
+			<Value>reg</Value>
+		</ListItem>
+		<ListItem>
 			<Text>MIVA Script</Text>
 			<Value>miva</Value>
 		</ListItem>
@@ -327,12 +355,20 @@
 			<Value>monkey</Value>
 		</ListItem>
 		<ListItem>
+			<Text>MS DOS</Text>
+			<Value>batch</Value>
+		</ListItem>
+		<ListItem>
 			<Text>MySQL</Text>
 			<Value>mysql</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Objective-C</Text>
 			<Value>objc</Value>
+		</ListItem>
+		<ListItem>
+			<Text>Oracle PL/SQL</Text>
+			<Value>plsql</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Perl</Text>
@@ -347,10 +383,6 @@
 			<Value>php</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Oracle PL/SQL</Text>
-			<Value>plsql</Value>
-		</ListItem>
-		<ListItem>
 			<Text>PowerShell</Text>
 			<Value>ps</Value>
 		</ListItem>
@@ -361,10 +393,6 @@
 		<ListItem>
 			<Text>R</Text>
 			<Value>r</Value>
-		</ListItem>
-		<ListItem>
-			<Text>Microsoft Registry</Text>
-			<Value>reg</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Ruby</Text>
@@ -391,6 +419,10 @@
 			<Value>sh</Value>
 		</ListItem>
 		<ListItem>
+			<Text>Swift</Text>
+			<Value>swift</Value>
+		</ListItem>
+		<ListItem>
 			<Text>TeX</Text>
 			<Value>tex</Value>
 		</ListItem>
@@ -399,16 +431,16 @@
 			<Value>tsql</Value>
 		</ListItem>
 		<ListItem>
+			<Text>Vim</Text>
+			<Value>vim</Value>
+		</ListItem>
+		<ListItem>
 			<Text>Visual Basic</Text>
 			<Value>vb</Value>
 		</ListItem>
 		<ListItem>
-			<Text>vbnet</Text>
+			<Text>Visual Basic .NET</Text>
 			<Value>vbnet</Value>
-		</ListItem>
-		<ListItem>
-			<Text>Vim</Text>
-			<Value>vim</Value>
 		</ListItem>
 		<ListItem>
 			<Text>XHTML</Text>
