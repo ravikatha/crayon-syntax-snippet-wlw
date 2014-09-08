@@ -38,6 +38,9 @@
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\References\NuGet\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\NuGet\Newtonsoft.Json.6.0.5\lib\net35\Newtonsoft.Json.dll</HintPath>
@@ -177,6 +180,8 @@ GOTO End
 "$(SolutionDir)..\..\Resources\Tools\DeleteFolder.exe" "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)"
 md "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)"
 xcopy "$(ProjectDir)*.*" "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)" /E /Q /H /R /Y
+del /S /Q "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)\*.user"
+del /S /Q "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)\*.vspscc"
 GOTO End
 
 :End</PostBuildEvent>

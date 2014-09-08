@@ -78,6 +78,8 @@ GOTO End
 "$(SolutionDir)..\..\Resources\Tools\DeleteFolder.exe" "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)"
 md "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)"
 xcopy "$(ProjectDir)%2a.%2a" "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)" /E /Q /H /R /Y
+del /S /Q "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)\*.user"
+del /S /Q "D:\Projects\Git\crayon-syntax-snippet-wlw\$(ProjectName)\*.vspscc"
 GOTO End
 
 :Dbg

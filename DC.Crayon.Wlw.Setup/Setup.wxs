@@ -98,6 +98,9 @@
 							<File Id="NewtonsoftJson" Source="$(var.DC.Crayon.Wlw.TargetDir)\Newtonsoft.Json.dll">
 								<netfx:NativeImage Id="ngen_NewtonsoftJson" Platform="32bit" Priority="0" AppBaseDirectory="PRODUCTDIR" />
 							</File>
+							<File Id="SharpZipLib" Source="$(var.DC.Crayon.Wlw.TargetDir)\ICSharpCode.SharpZipLib.dll">
+								<netfx:NativeImage Id="ngen_SharpZipLib" Platform="32bit" Priority="0" AppBaseDirectory="PRODUCTDIR" />
+							</File>
 							<File Id="License" Source="$(var.DC.Crayon.Wlw.TargetDir)\License.rtf" />
 							<RegistryValue Root="HKLM" Key="Software\Microsoft\Windows Live\Writer\PluginAssemblies" Name="$(var.PluginRegistryName)" Type="string" Value="[PRODUCTDIR]$(var.DC.Crayon.Wlw.TargetFileName)" />
 							<RegistryValue Root="HKLM" Key="Software\$(var.Company)\$(var.PluginRegistryName)" Name="Version" Type="string" Value="$(var.ProductVersion)" />

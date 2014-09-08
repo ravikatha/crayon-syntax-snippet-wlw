@@ -10,6 +10,7 @@ using System.Net;
 using System.Text;
 using System.Windows.Forms;
 using DC.Crayon.Wlw.Properties;
+using ICSharpCode.SharpZipLib.Zip;
 
 namespace DC.Crayon.Wlw.Forms
 {
@@ -47,11 +48,19 @@ namespace DC.Crayon.Wlw.Forms
 			if (DialogResult != DialogResult.OK)
 			{
 				// Delete the file
-				if ((DownloadedFile != null) && File.Exists(DownloadedFile))
+				if ((DownloadedZipFile != null) && File.Exists(DownloadedZipFile))
 				{
 					try
 					{
-						File.Delete(DownloadedFile);
+						File.Delete(DownloadedZipFile);
+					}
+					catch { }
+				}
+				if ((DownloadedSetupFile != null) && File.Exists(DownloadedSetupFile))
+				{
+					try
+					{
+						File.Delete(DownloadedSetupFile);
 					}
 					catch { }
 				}
@@ -63,7 +72,16 @@ namespace DC.Crayon.Wlw.Forms
 		/// <summary>
 		/// Full path of the downloaded file
 		/// </summary>
-		public string DownloadedFile
+		public string DownloadedZipFile
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>
+		/// Full path of the downloaded file
+		/// </summary>
+		public string DownloadedSetupFile
 		{
 			get;
 			private set;
@@ -96,16 +114,23 @@ namespace DC.Crayon.Wlw.Forms
 			// Initialize this dialog result
 			Downloaded = false;
 
-			// Initiate download, create a temp file
-			DownloadedFile = Path.GetTempFileName();
-			if (File.Exists(DownloadedFile))
+			// Temp file for Zip
+			DownloadedZipFile = Path.GetTempFileName();
+			if (File.Exists(DownloadedZipFile))
 			{
-				File.Delete(DownloadedFile);
+				File.Delete(DownloadedZipFile);
 			}
-			DownloadedFile += ".msi";
-			if (File.Exists(DownloadedFile))
+			DownloadedZipFile += ".zip";
+			if (File.Exists(DownloadedZipFile))
 			{
-				File.Delete(DownloadedFile);
+				File.Delete(DownloadedZipFile);
+			}
+
+			// Initiate download, create a temp file
+			DownloadedSetupFile = Path.Combine(Path.GetDirectoryName(DownloadedZipFile), "DC.Crayon.Wlw.Setup.msi");
+			if (File.Exists(DownloadedSetupFile))
+			{
+				File.Delete(DownloadedSetupFile);
 			}
 
 			// Start download to file
@@ -115,7 +140,7 @@ namespace DC.Crayon.Wlw.Forms
 			progressBar.Maximum = 1000000;
 			_webClient.DownloadProgressChanged += this.OnDownloadProgress;
 			_webClient.DownloadFileCompleted += this.OnDownloadCompleted;
-			_webClient.DownloadFileAsync(new Uri(_versionInfo.DownloadUrl, UriKind.Absolute), DownloadedFile);
+			_webClient.DownloadFileAsync(new Uri(_versionInfo.DownloadUrl, UriKind.Absolute), DownloadedZipFile);
 		}
 
 		private void OnClose(object sender, EventArgs e)
@@ -175,19 +200,22 @@ namespace DC.Crayon.Wlw.Forms
 			if ((e.Error != null) || e.Cancelled)
 			{
 				// Delete File
-				if ((DownloadedFile != null)
-					&& File.Exists(DownloadedFile))
+				if ((DownloadedZipFile != null)
+					&& File.Exists(DownloadedZipFile))
 				{
 					try
 					{
-						File.Delete(DownloadedFile);
-						DownloadedFile = null;
+						File.Delete(DownloadedZipFile);
+						DownloadedZipFile = null;
 					}
 					catch { }
 				}
 			}
 			else
 			{
+				// Extract the contained file
+				var fastZip = new FastZip();
+				fastZip.ExtractZip(DownloadedZipFile, Path.GetDirectoryName(DownloadedZipFile), FastZip.Overwrite.Always, null, null, null, true);
 				Downloaded = true;
 			}
 

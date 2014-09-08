@@ -32,7 +32,8 @@ namespace DC.Crayon.Wlw
 		private const string _registryLocationValueName = "Location";
 
 		private const string _gitReleaseListUrl = "https://api.github.com/repos/dotcastle/crayon-syntax-snippet-wlw/releases";
-		private const string _gitSetupAssetName = "DC.Crayon.Wlw.Setup.msi";
+		private const string _gitSetupAssetName = "DC.Crayon.Wlw.Setup.zip";
+		private const string _gitSetupMsiAssetName = "DC.Crayon.Wlw.Setup.msi";
 
 		public const string CheckUpdatesOnStartupOptionName = "Updates_CheckOnStarup";
 		public const string IncludePreReleaseVersionsOptionName = "Updates_IncludePreRelease";
@@ -252,7 +253,7 @@ namespace DC.Crayon.Wlw
 						if ((result == DialogResult.OK)
 							&& updateForm.Downloaded)
 						{
-							Process.Start(new ProcessStartInfo(updateForm.DownloadedFile));
+							Process.Start(new ProcessStartInfo(updateForm.DownloadedSetupFile));
 						}
 					}
 				}
