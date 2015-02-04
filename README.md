@@ -6,4 +6,4 @@ Read more about this <a href="http://www.dotcastle.com/blog/default/tools-plug-i
 <hr />
 Author: DotCastle TechnoSolutions Private Limited<br />
 Web: http://www.dotcastle.com<br />
-Copyright: Copyright © 2013 - 2014, DotCastle TechnoSolutions Private Limited, INDIA. All rights reserved.
+Copyright: Copyright © 2013 - 2015, DotCastle TechnoSolutions Private Limited, INDIA. All rights reserved.
