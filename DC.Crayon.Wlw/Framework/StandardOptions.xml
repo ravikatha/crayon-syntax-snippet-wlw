@@ -3,11 +3,11 @@
 <StandardOptions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<StandardThemeListItems>
 		<ListItem>
-			<Text>1c Kod</Text>
+			<Text>1C (���)</Text>
 			<Value>1c-kod</Value>
 		</ListItem>
 		<ListItem>
-			<Text>1c Zapros</Text>
+			<Text>1C (������)</Text>
 			<Value>1c-zapros</Value>
 		</ListItem>
 		<ListItem>
@@ -19,12 +19,16 @@
 			<Value>ado</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Arduino Ide</Text>
+			<Text>Arduino IDE</Text>
 			<Value>arduino-ide</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Bncplusplus</Text>
 			<Value>bncplusplus</Value>
+		</ListItem>
+		<ListItem>
+			<Text>Capacitacionti</Text>
+			<Value>capacitacionti</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Cg Cookie</Text>
@@ -67,7 +71,7 @@
 			<Value>github</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Idle</Text>
+			<Text>IDLE</Text>
 			<Value>idle</Value>
 		</ListItem>
 		<ListItem>
@@ -95,7 +99,15 @@
 			<Value>neon</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Powershell Ise</Text>
+			<Text>Obsidian</Text>
+			<Value>obsidian</Value>
+		</ListItem>
+		<ListItem>
+			<Text>Orange Code</Text>
+			<Value>orange-code</Value>
+		</ListItem>
+		<ListItem>
+			<Text>PowerShell ISE</Text>
 			<Value>powershell-ise</Value>
 		</ListItem>
 		<ListItem>
@@ -103,7 +115,11 @@
 			<Value>pspad</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Secrets Of Rock</Text>
+			<Text>Raygun</Text>
+			<Value>raygun</Value>
+		</ListItem>
+		<ListItem>
+			<Text>Secrets Of Rock 1</Text>
 			<Value>secrets-of-rock</Value>
 		</ListItem>
 		<ListItem>
@@ -123,7 +139,7 @@
 			<Value>son-of-obsidian</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Ssms 2012</Text>
+			<Text>Ssms2012</Text>
 			<Value>ssms2012</Value>
 		</ListItem>
 		<ListItem>
@@ -151,12 +167,20 @@
 			<Value>twilight</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Vs 2012</Text>
+			<Text>Visual Assist</Text>
+			<Value>visual-assist</Value>
+		</ListItem>
+		<ListItem>
+			<Text>VS2012</Text>
 			<Value>vs2012</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Vs 2012 Black</Text>
+			<Text>Vs2012 Black</Text>
 			<Value>vs2012-black</Value>
+		</ListItem>
+		<ListItem>
+			<Text>X3info</Text>
+			<Value>x3info</Value>
 		</ListItem>
 	</StandardThemeListItems>
 	<StandardFontListItems>
@@ -215,23 +239,19 @@
 	</StandardFontListItems>
 	<StandardLanguageListItems>
 		<ListItem>
-			<Text>1С (Запрос)</Text>
-			<Value>1c-zapros</Value>
-		</ListItem>
-		<ListItem>
 			<Text>1С (Код)</Text>
 			<Value>1c-kod</Value>
+		</ListItem>
+		<ListItem>
+			<Text>1С (Запрос)</Text>
+			<Value>1c-zapros</Value>
 		</ListItem>
 		<ListItem>
 			<Text>ABAP</Text>
 			<Value>abap</Value>
 		</ListItem>
 		<ListItem>
-			<Text>ActionScript</Text>
-			<Value>as</Value>
-		</ListItem>
-		<ListItem>
-			<Text>ADA</Text>
+			<Text>ada</Text>
 			<Value>ada</Value>
 		</ListItem>
 		<ListItem>
@@ -251,16 +271,24 @@
 			<Value>arduino</Value>
 		</ListItem>
 		<ListItem>
-			<Text>ASP</Text>
-			<Value>asp</Value>
+			<Text>ActionScript</Text>
+			<Value>as</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Assembly (x86)</Text>
 			<Value>asm</Value>
 		</ListItem>
 		<ListItem>
+			<Text>ASP</Text>
+			<Value>asp</Value>
+		</ListItem>
+		<ListItem>
 			<Text>AutoIt</Text>
 			<Value>autoit</Value>
+		</ListItem>
+		<ListItem>
+			<Text>MS DOS</Text>
+			<Value>batch</Value>
 		</ListItem>
 		<ListItem>
 			<Text>C</Text>
@@ -291,12 +319,12 @@
 			<Value>delphi</Value>
 		</ListItem>
 		<ListItem>
-			<Text>DelphiWebScript/DWS</Text>
-			<Value>dws</Value>
-		</ListItem>
-		<ListItem>
 			<Text>diff</Text>
 			<Value>diff</Value>
+		</ListItem>
+		<ListItem>
+			<Text>DelphiWebScript/DWS</Text>
+			<Value>dws</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Erlang</Text>
@@ -311,12 +339,12 @@
 			<Value>haskell</Value>
 		</ListItem>
 		<ListItem>
-			<Text>INI</Text>
-			<Value>ini</Value>
-		</ListItem>
-		<ListItem>
 			<Text>Inventor iLogic</Text>
 			<Value>ilogic</Value>
+		</ListItem>
+		<ListItem>
+			<Text>INI</Text>
+			<Value>ini</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Java</Text>
@@ -343,20 +371,12 @@
 			<Value>matlab</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Microsoft Registry</Text>
-			<Value>reg</Value>
-		</ListItem>
-		<ListItem>
 			<Text>MIVA Script</Text>
 			<Value>miva</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Monkey</Text>
 			<Value>monkey</Value>
-		</ListItem>
-		<ListItem>
-			<Text>MS DOS</Text>
-			<Value>batch</Value>
 		</ListItem>
 		<ListItem>
 			<Text>MySQL</Text>
@@ -367,8 +387,8 @@
 			<Value>objc</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Oracle PL/SQL</Text>
-			<Value>plsql</Value>
+			<Text>OCaml</Text>
+			<Value>ocaml</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Perl</Text>
@@ -383,6 +403,10 @@
 			<Value>php</Value>
 		</ListItem>
 		<ListItem>
+			<Text>Oracle PL/SQL</Text>
+			<Value>plsql</Value>
+		</ListItem>
+		<ListItem>
 			<Text>PowerShell</Text>
 			<Value>ps</Value>
 		</ListItem>
@@ -393,6 +417,10 @@
 		<ListItem>
 			<Text>R</Text>
 			<Value>r</Value>
+		</ListItem>
+		<ListItem>
+			<Text>Microsoft Registry</Text>
+			<Value>reg</Value>
 		</ListItem>
 		<ListItem>
 			<Text>Ruby</Text>
@@ -431,16 +459,16 @@
 			<Value>tsql</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Vim</Text>
-			<Value>vim</Value>
-		</ListItem>
-		<ListItem>
 			<Text>Visual Basic</Text>
 			<Value>vb</Value>
 		</ListItem>
 		<ListItem>
-			<Text>Visual Basic .NET</Text>
+			<Text>vbnet</Text>
 			<Value>vbnet</Value>
+		</ListItem>
+		<ListItem>
+			<Text>Vim</Text>
+			<Value>vim</Value>
 		</ListItem>
 		<ListItem>
 			<Text>XHTML</Text>
