@@ -121,7 +121,7 @@ namespace DC.Crayon.Wlw.Forms
 
 		private void OnHelpClick(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			Process.Start(new ProcessStartInfo("http://www.dotcastle.com/blog/default/tools-plug-ins/crayon-syntax-highlighter-plugin-for-windows-live-writer"));
+			Process.Start(new ProcessStartInfo("http://www.dotcastle.com/blog/crayon-syntax-highlighter-plugin-for-windows-live-writer"));
 		}
 
 		private void OnCrayonGitClick(object sender, LinkLabelLinkClickedEventArgs e)
