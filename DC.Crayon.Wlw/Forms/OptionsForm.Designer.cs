@@ -47,6 +47,8 @@
 			this.includePreReleaseVersionsCheckbox = new System.Windows.Forms.CheckBox();
 			this.checkForUpdatesCheckbox = new System.Windows.Forms.CheckBox();
 			this.aboutTabPage = new System.Windows.Forms.TabPage();
+			this.linkLabel6 = new System.Windows.Forms.LinkLabel();
+			this.label5 = new System.Windows.Forms.Label();
 			this.linkLabel5 = new System.Windows.Forms.LinkLabel();
 			this.linkLabel4 = new System.Windows.Forms.LinkLabel();
 			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -58,8 +60,6 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.productNameLabel = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.linkLabel6 = new System.Windows.Forms.LinkLabel();
 			((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
 			this.tabControl.SuspendLayout();
 			this.settingsTabPage.SuspendLayout();
@@ -257,6 +257,27 @@
 			this.aboutTabPage.Text = "About";
 			this.aboutTabPage.UseVisualStyleBackColor = true;
 			// 
+			// linkLabel6
+			// 
+			this.linkLabel6.Dock = System.Windows.Forms.DockStyle.Top;
+			this.linkLabel6.Location = new System.Drawing.Point(0, 282);
+			this.linkLabel6.Name = "linkLabel6";
+			this.linkLabel6.Size = new System.Drawing.Size(726, 15);
+			this.linkLabel6.TabIndex = 14;
+			this.linkLabel6.TabStop = true;
+			this.linkLabel6.Text = "View License";
+			this.linkLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.linkLabel6.VisitedLinkColor = System.Drawing.Color.Blue;
+			this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnLicenseClick);
+			// 
+			// label5
+			// 
+			this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+			this.label5.Location = new System.Drawing.Point(0, 257);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(726, 25);
+			this.label5.TabIndex = 13;
+			// 
 			// linkLabel5
 			// 
 			this.linkLabel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -278,8 +299,8 @@
 			this.linkLabel4.Size = new System.Drawing.Size(726, 15);
 			this.linkLabel4.TabIndex = 11;
 			this.linkLabel4.TabStop = true;
-			this.linkLabel4.Text = "help: http://www.dotcastle.com/blog/default/tools-plug-ins/crayon-syntax-highligh" +
-    "ter-plugin-for-windows-live-writer";
+			this.linkLabel4.Text = "help: http://www.dotcastle.com/blog/crayon-syntax-highlighter-plugin-for-windows-" +
+    "live-writer";
 			this.linkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.linkLabel4.VisitedLinkColor = System.Drawing.Color.Blue;
 			this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnHelpClick);
@@ -388,27 +409,6 @@
 			this.productNameLabel.TabIndex = 0;
 			this.productNameLabel.Text = "Crayon Code Snippet Plug-in for Windows Live Writer";
 			this.productNameLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			// 
-			// label5
-			// 
-			this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-			this.label5.Location = new System.Drawing.Point(0, 257);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(726, 25);
-			this.label5.TabIndex = 13;
-			// 
-			// linkLabel6
-			// 
-			this.linkLabel6.Dock = System.Windows.Forms.DockStyle.Top;
-			this.linkLabel6.Location = new System.Drawing.Point(0, 282);
-			this.linkLabel6.Name = "linkLabel6";
-			this.linkLabel6.Size = new System.Drawing.Size(726, 15);
-			this.linkLabel6.TabIndex = 14;
-			this.linkLabel6.TabStop = true;
-			this.linkLabel6.Text = "View License";
-			this.linkLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.linkLabel6.VisitedLinkColor = System.Drawing.Color.Blue;
-			this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnLicenseClick);
 			// 
 			// OptionsForm
 			// 
